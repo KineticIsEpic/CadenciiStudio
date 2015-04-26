@@ -1,0 +1,706 @@
+0163	5a99f1e8a00593a08d1ce2be4cd6cc18 *resampler.exe
+0186	8caf02e5f1344eb01ac56e69525ea2af *resampler.exe
+0187	8caf02e5f1344eb01ac56e69525ea2af *resampler.exe
+0207	332be76a27ae2c6cd42a59d3607edbbd *resampler.exe
+0207	57f17443bfc057d9a5a6ff81ec12b862 *resampler7.exe
+0208	332be76a27ae2c6cd42a59d3607edbbd *resampler.exe
+0208	57f17443bfc057d9a5a6ff81ec12b862 *resampler7.exe
+0209	332be76a27ae2c6cd42a59d3607edbbd *resampler.exe
+0209	57f17443bfc057d9a5a6ff81ec12b862 *resampler7.exe
+0230	a50f91ec51c399a6cbbcb33996bbcbb3 *resampler.exe
+0230	8e6b45e4fbfe30e58eb0cf436a0ea4f6 *resampler7.exe
+0231	a50f91ec51c399a6cbbcb33996bbcbb3 *resampler.exe
+0231	8e6b45e4fbfe30e58eb0cf436a0ea4f6 *resampler7.exe
+0232	1e0963f2d6ea2b50bafa5875bc6a4695 *resampler.exe
+0232	782352589e4905033b47db6ab7ecb017 *resampler7.exe
+0233	d09e914d05b11f752595a1d65d9654b9 *resampler.exe
+0233	ada3d7bde7ccc237277ef4a55373a246 *resampler7.exe
+0234	d09e914d05b11f752595a1d65d9654b9 *resampler.exe
+0234	ada3d7bde7ccc237277ef4a55373a246 *resampler7.exe
+0235	d09e914d05b11f752595a1d65d9654b9 *resampler.exe
+0235	ada3d7bde7ccc237277ef4a55373a246 *resampler7.exe
+0236	13215465025a35e4ab4d4d7cb8c8978e *resampler.exe
+0236	90df9c9861b085f30f1ced4fb210d7ca *resampler7.exe
+0240	a23ba6bed253afd85dab69f3db4ac396 *resampler.exe
+0240	90df9c9861b085f30f1ced4fb210d7ca *resampler7.exe
+0241	a23ba6bed253afd85dab69f3db4ac396 *resampler.exe
+0241	90df9c9861b085f30f1ced4fb210d7ca *resampler7.exe
+0243	a23ba6bed253afd85dab69f3db4ac396 *resampler.exe
+0246	3028ca062a6fe5dd4770be55df2ccee7 *resampler.exe
+0247	b92cab9928b3d8d16bd795a74aa49b27 *resampler.exe
+0248	bca753dc7813d79cf3f79fbd037822f5 *resampler.exe
+0249	dae09d2524c1ef628518ed318cef8990 *resampler.exe
+0260	b51df5d2ca1f4b7daf10e9f19c90e3b2 *resampler.exe
+0261	b51df5d2ca1f4b7daf10e9f19c90e3b2 *resampler.exe
+0270	b51df5d2ca1f4b7daf10e9f19c90e3b2 *resampler.exe
+0271	b51df5d2ca1f4b7daf10e9f19c90e3b2 *resampler.exe
+0272	1860ae04d3835fc1513f3b45e17db75c *resampler.exe
+0273	24bc223a47b2bb5475f75cd50edfd9d0 *resampler.exe
+0274	bbf1be0e6de17c7391adc1b1cd6ff91a *resampler.exe
+0275	bbf1be0e6de17c7391adc1b1cd6ff91a *resampler.exe
+0276	03230de6583d22a8daf90ea325d4a023 *resampler.exe
+
+-general todo----------------------------------------------------------
+
+-アイディアのメモ書きなど----------------------------------------------
+-BFileChooserの.ctor, setSelectedFileの動作を変えたのでC#側でチェック
+-クレッシェンド等をMusicXMLに出力する（Sinsyが対応してるかわからんので保留）
+-wavtool.exeとかresampler.exeをドラッグ＆ドロップで登録できるようにする
+-oto.iniのドラッグ＆ドロップで登録できるようにする
+-StartPointの項目も旗で表示できないか？
+-音声処理のリファクタリング
+--VOCALOID1/2:    OK
+--UTAU:           NG,時間経過と共にずれが増加する
+--vConnect-STAND: OK
+--AquesTone:      OK
+-操作内容を記録するマクロ機能。
+-コントロールカーブのアナログ入力
+-編集履歴
+-エラー通知
+-曲のタイムライン上にユーザが付けるタグ（付箋）的な物。「次の付箋に進む」「前の付箋に戻る」
+-VSTエフェクトを実装できないか？
+-MTCで同期する機能
+-最新のバージョンがあるかどうかを問い合わせる機能
+-makeRes.csの、Cursorのときの処理を追加する
+-PortUtil.getbytes*, make_*系の実装の妥当性確認。
+-org.kbinani.dllの*EventHandler.csのJava実装部分がBuildJavaUIからプリプロセッサ・インポートしない書き方になっているのでこれを直す．eclipseで開いたときこれらのイベントハンドラが無いとテスト実行できないので．
+-Cadencii.exeをコマンドラインツール化出来ないか？
+--MusicXML出力「cadencii foo.vsq -o foo.xml」
+--XVSQ->VSQ「cadencii foo.xvsq -o foo.vsq」
+--VSQ->XVSQ「cadencii foo.vsq -o foo.xvsq」
+--すべてレンダリング「cadencii foo.vsq -o foo.wav」
+--時間範囲(10秒後から300秒分)を指定してレンダリング「cadencii foo.vsq -o foo.wav -ss 10 -d 300」
+--トラック(第1,3,4,5トラック)、時間範囲を指定してレンダリング「cadencii foo.vsq -o foo.wav -ss 10 -d 300 -t 1,3-5」
+
+-jcadencii todo--------------------------------------------------------
+-xvsqを読み込んだとき，waveviewにwaveが読み込まれないことがある
+-(仕様)最前面に表示されるウィンドウ（アイコンパレットやミキサー）が表示状態のときに言語設定を変えると，メニュー項目が正しく書き変わらない．
+-(仕様)メニュー項目のMouseEnterの処理がおかしい．menuFile以下の奴しか効いてない
+
+-v3.2.0todo------------------------------------------------------------
+-Lengthが変わると、後ろのアイテムもずれるはずだが、これができてない
+
+-v3.0.24todo-----------------------------------------------------------
+
+-v3.2.0done------------------------------------------------------------
+-歌手変更の一覧の左端に，常に歌手変更イベントを表示するようにした
+-UTAU関連のテキストファイルのエンコーディングがShift_JISでなかった場合の処理を追加
+-コントロールカーブ表示部分の，左上の数値表示を削除した(マウスの位置に数値表示しているので)
+
+-v3.1.5done------------------------------------------------------------
+-歌詞にコンマが含まれるVSQを正しく読み込めないのを修正
+-起動ごとにパレットツールとスクリプトをコンパイルするのを止め、キャッシュに保持しておくようにした
+-プリメジャーの範囲内にのみにコントロールカーブを書いた場合、プリメジャー以降のコントロールカーブの値がVSQに正しく出力されないのを修正。
+-デフォルトの音声合成システムを設定できるようにした
+-初回の起動時に、自動的に画面の表示言語を設定するようにした(日本語なら日本語の画面に)
+-分節に分ける必要のある英単語の処理を追加した
+-デフォルトの「英単語→発音記号列」の辞書を充実させた
+-UTAU音源を読み込むとき，charater.txtがない場合はフォルダ名を音源名として利用するようにした
+-ビブラートのプリセットを、VOCALOID Editor互換にするか、オリジナル設定にするかを選べるようにした
+-設定ダイアログを閉じた後の処理を軽量化した
+-ピアノロール上でピッチベンドを編集する機能を実装
+-マウスの軌跡をトレースする部分のパフォーマンスを改善(処理時間の従来比200分の1)
+-ピッチ曲線に，ビブラートの波線を反映させる
+-UTAUのとき、*.wavを引き当てられないとき音符の色を変える
+-STRAIGHT x UTAUのとき、analyzed\*.stfを引き当てられないとき音符の色を変える
+-プロパティの編集によって、V-Rate, V-Depthが元に戻ってしまう
+
+-ログ取り--------------------------------------------------------------
+/*Cadencii*/
+	Amplifier.cs
+	AmplifyCoefficient.cs
+	AppManager.cs
+	AquesToneDriver.cs
+	AquesToneRenderingRunner.cs
+	AquesToneWaveGenerator.cs
+	AttachedCurve.cs
+	AttackVariation.cs
+	AttackVariationConverter.cs
+	AutoVibratoMinLengthEnum.cs
+	AutoVibratoMinLengthUtil.cs
+	BAssemblyInfo.cs
+	BezierChain.cs
+	BezierControlType.cs
+	BezierCurves.cs
+	BezierPickedSide.cs
+	BezierPoint.cs
+	BgmFile.cs
+	BooleanEnum.cs
+	Cadencii.cs
+	CadenciiCommand.cs
+	CadenciiCommandType.cs
+	CircuitDiagram.cs
+	ClipboardEntry.cs
+	ClockResolution.cs
+	ClockResolutionUtility.cs
+	CommandTree.cs
+	CommandTreeUnit.cs
+	CurveType.cs
+	DefaultVibratoLengthEnum.cs
+	DefaultVibratoLengthUtil.cs
+	DrawObject.cs
+	DrawObjectType.cs
+	DynaffComparisonContext.cs
+	EditedZone.cs
+	EditedZoneCommand.cs
+	EditedZoneUnit.cs
+	EditMode.cs
+	EditorConfig.cs
+	EditorStatus.cs
+	EditTool.cs
+	EmptyRenderingRunner.cs
+	FederChangedEventHandler.cs
+	FileWaveReceiver.cs
+	FileWaveSender.cs
+	FormAskKeySoundGeneration.cs
+	FormBeatConfig.cs
+	FormBezierPointEdit.cs
+	FormCompileResult.cs
+	FormCurvePointEdit.cs
+	FormDeleteBar.cs
+	FormGameControlerConfig.cs
+	FormGenerateKeySound.cs
+	FormIconPalette.cs
+	FormImportLyric.cs
+	FormInsertBar.cs
+	FormMain.cs
+	FormMidiConfig.cs
+	FormMidiImExport.cs
+	FormMidiImExportConfig.cs
+	FormMixer.cs
+	FormNoteExpressionConfig.cs
+FormNoteProperty.cs
+FormPluginUi.cs
+FormRandomize.cs
+FormRealtimeConfig.cs
+FormShortcutKeys.cs
+FormSingerStyleConfig.cs
+FormSplash.cs
+FormSynthesize.cs
+FormTempoConfig.cs
+FormTrackProperty.cs
+FormVibratoConfig.cs
+FormWordDictionary.cs
+HScroll.cs
+ICommand.cs
+ICommandRunnable.cs
+IComparisonContext.cs
+IconParader.cs
+IPaletteTool.cs
+KanaDeRomanization.cs
+KeySoundPlayer.cs
+LyricTextBox.cs
+Matrix2D.cs
+MemoryManager.cs
+MidiDeviceImp.cs
+MidiPlayer.cs
+MidiPortConfig.cs
+MidiQueue.cs
+Mixer.cs
+MonitorWaveReceiver.cs
+MouseTracer.cs
+MuteChangedEventHandler.cs
+NoteNumberExpressionType.cs
+NoteNumberProperty.cs
+NoteNumberPropertyConverter.cs
+NumberTextBox.cs
+NumericUpDownEx.cs
+OtoArgs.cs
+PaletteToolServer.cs
+PanelState.cs
+PanpotChangedEventHandler.cs
+PencilMode.cs
+PencilModeEnum.cs
+PictPianoRoll.cs
+PlatformEnum.cs
+PlayPositionSpecifier.cs
+PointD.cs
+Preference.cs
+PropertyPanel.cs
+PropertyPanelContainer.cs
+PropertyPanelState.cs
+QuantizeMode.cs
+QuantizeModeUtil.cs
+RenderedStatus.cs
+RendererKind.cs
+RendererKindUtil.cs
+RenderingRunner.cs
+RenderQueue.cs
+RenderRequiredEventHandler.cs
+Resources.cs
+RgbColor.cs
+SandBox.cs
+ScreenStatus.cs
+ScriptInvoker.cs
+ScriptReturnStatus.cs
+ScriptServer.cs
+SelectedBezierPoint.cs
+SelectedCurveChangedEventHandler.cs
+SelectedEventChangedEventHandler.cs
+SelectedEventEntry.cs
+SelectedEventEntryPropertyDescriptor.cs
+SelectedEventEntryTypeConverter.cs
+SelectedRegion.cs
+SelectedTempoEntry.cs
+SelectedTimesigEntry.cs
+SelectedTrackChangedEventHandler.cs
+Separator.cs
+SingerEventComparisonContext.cs
+SoloChangedEventHandler.cs
+StateChangeRequiredEventHandler.cs
+StraightRenderingQueue.cs
+StraightRenderingRunner.cs
+ToolStripLocation.cs
+TopMostChangedEventHandler.cs
+TrackSelector.cs
+UpdateProgressEventHandler.cs
+UtauFreq.cs
+UtauRenderingRunner.cs
+UtauVoiceDB.cs
+UtauWaveGenerator.cs
+Utility.cs
+ValuePairOfStringArrayOfKeys.cs
+ValuePairOfStringBoolean.cs
+VersionInfo.cs
+VibratoLengthEditingRule.cs
+VibratoPointIteratorByClock.cs
+VibratoPointIteratorBySec.cs
+VibratoVariation.cs
+VibratoVariationConverter.cs
+VocaloidDriver.cs
+VocaloidRenderingRunner.cs
+VocaloidWaveGenerator.cs
+VolumeTracker.cs
+VsqBPListComparisonContext.cs
+VsqFileEx.cs
+vstidrv.cs
+VSTiProxy.cs
+VstSdk.cs
+WaveDrawContext.cs
+WaveGenerator.cs
+WaveReceiver.cs
+WaveSender.cs
+WaveSenderDriver.cs
+WaveUnit.cs
+WaveView.cs
+winmmhelp.cs
+XmlStaticMemberSerializerEx.cs
+/*org.kbinani*/
+Arrays.cs
+awt.cs
+awt.event.cs
+awt.geom.cs
+awt.image.cs
+BArray.cs
+Base64.cs
+BDelegate.cs
+BEvent.cs
+BEventArgs.cs
+BEventHandler.cs
+BufferedReader.cs
+BufferedWriter.cs
+ByRef.cs
+Collections.cs
+cp932.cs
+cp932reader.cs
+cp932writer.cs
+fft.cs
+File.cs
+Graphics.cs
+imageio.cs
+InternalStdErr.cs
+InternalStdOut.cs
+io.cs
+Iterator.cs
+lang.cs
+ListIterator.cs
+Logger.cs
+math.cs
+misc.cs
+PortUtil.cs
+RandomAccessFile.cs
+swing.cs
+util.cs
+ValuePair.cs
+Vector.cs
+windows.cs
+wingdi.cs
+winmm.cs
+/*org.kbinani.apputil*/
+AuthorListEntry.cs
+BHScrollBar.cs
+BHScrollBar.Designer.cs
+BitmapEx.cs
+BSplitContainer.cs
+BSplitterPanel.cs
+BTrackBar.cs
+BVScrollBar.cs
+BVScrollBar.Designer.cs
+ColorBar.cs
+CubicSpline.cs
+CursorUtil.cs
+DockPanelContainer.cs
+ISO639.cs
+MathEx.cs
+MessageBody.cs
+MessageBodyEntry.cs
+Messaging.cs
+PolylineDrawer.cs
+Util.cs
+VersionInfo.cs
+VersionInfo.Designer.cs
+/*org.kbinani.componentmodel*/
+BBackgroundWorker.cs
+BCancelEventArgs.cs
+BCancelEventHandler.cs
+BDoWorkEventArgs.cs
+BDoWorkEventHandler.cs
+BProgressChangedEventArgs.cs
+BProgressChangedEventHandler.cs
+BRunWorkerCompletedEventArgs.cs
+BRunWorkerCompletedEventHandler.cs
+/*org.kbinani.media*/
+AviReader.cs
+AviWriterVcm.cs
+AviWriterVfw.cs
+BSoundPlayer.cs
+IAviWriter.cs
+IWaveReceiver.cs
+MediaPlayer.cs
+MidiInDevice.cs
+MidiOutDevice.cs
+PipedAviWriter.cs
+PlaySound.cs
+RawAvi2Writer.cs
+Util.cs
+VCM.cs
+VFW.cs
+Wave.cs
+WavePlay.cs
+WaveRateConvertAdapter.cs
+WaveRateConverter.cs
+WaveReader.cs
+WaveWriter.cs
+/*org.kbinani.vsq*/
+BPPair.cs
+DynamicsMode.cs
+ExpressionConfigSys.cs
+IconDynamicsHandle.cs
+IconHandle.cs
+IconParameter.cs
+IndexIteratorKind.cs
+ITextWriter.cs
+Lyric.cs
+LyricHandle.cs
+MidiEvent.cs
+MidiFile.cs
+NoteHeadHandle.cs
+NRPN.cs
+NrpnData.cs
+NrpnIterator.cs
+PlayMode.cs
+SingerConfig.cs
+SingerConfigSys.cs
+SymbolTable.cs
+SymbolTableEntry.cs
+SynthesizerType.cs
+TempoTableEntry.cs
+TempoVector.cs
+TextStream.cs
+Timesig.cs
+TimeSigTableEntry.cs
+TransCodeUtil.cs
+UstEnvelope.cs
+UstEvent.cs
+UstFile.cs
+UstFileWriteOptions.cs
+UstPortamento.cs
+UstPortamentoPoint.cs
+UstPortamentoType.cs
+UstTrack.cs
+UstVibrato.cs
+VibratoBPList.cs
+VibratoBPPair.cs
+VibratoHandle.cs
+VocaloSysUtil.cs
+VsqBarLineType.cs
+VsqBPList.cs
+VsqBPPair.cs
+VsqBPPairSearchContext.cs
+VsqCommand.cs
+VsqCommandType.cs
+VsqCommon.cs
+VsqEvent.cs
+VsqEventList.cs
+VsqFile.cs
+VsqHandle.cs
+VsqHandleType.cs
+VsqID.cs
+VsqIDType.cs
+VsqMaster.cs
+VsqMetaText.cs
+VsqMixer.cs
+VsqMixerEntry.cs
+VsqNote.cs
+VsqNrpn.cs
+VsqPhoneticSymbol.cs
+VsqTrack.cs
+VsqVoiceLanguage.cs
+WrappedStreamWriter.cs
+/*org.kbinani.windows.forms*/
+BButton.cs
+BCheckBox.cs
+BComboBox.cs
+BDialog.cs
+BDialogResult.cs
+BFileChooser.cs
+BFolderBrowser.cs
+BFontChooser.cs
+BForm.cs
+BFormClosedEventArgs.cs
+BFormClosedEventHandler.cs
+BFormClosingEventArgs.cs
+BFormClosingEventHandler.cs
+BFormWindowState.cs
+BGroupBox.cs
+BHScrollBar.cs
+BKeyEventArgs.cs
+BKeyEventHandler.cs
+BKeyPressEventArgs.cs
+BKeyPressEventHandler.cs
+BKeys.cs
+BKeysUtility.cs
+BLabel.cs
+BListView.cs
+BListViewItem.cs
+BMenu.cs
+BMenuBar.cs
+BMenuItem.cs
+BMenuSeparator.cs
+BMouseButtons.cs
+BMouseEventArgs.cs
+BMouseEventHandler.cs
+BNumericUpDown.cs
+BPaintEventArgs.cs
+BPaintEventHandler.cs
+BPanel.cs
+BPictureBox.cs
+BPopupMenu.cs
+BPreviewKeyDownEventArgs.cs
+BPreviewKeyDownEventHandler.cs
+BProgressBar.cs
+BPropertyGrid.cs
+BRadioButton.cs
+BScrollBar.cs
+BSlider.cs
+BSplitPane.cs
+BStatusLabel.cs
+BTextArea.cs
+BTextBox.cs
+BTimer.cs
+BToggleButton.cs
+BToolBar.cs
+BToolStripButton.cs
+BToolStripDropDownButton.cs
+BToolStripLabel.cs
+BToolStripTextBox.cs
+BVScrollBar.cs
+InputBox.cs
+Utility.cs
+/*org.kbinani.xml*/
+XmlMember.cs
+XmlPoint.cs
+XmlRectangle.cs
+XmlSerializer.cs
+XmlSerializeWithDescription.cs
+XmlStaticMemberSerializer.cs
+
+-v3.0.23done-----------------------------------------------------------
+-プロパティの編集によって、V-Rate, V-Depthが元に戻ってしまう
+
+-v3.0.20done-----------------------------------------------------------
+-自動ビブラートが正しく作成されない場合があるのを修正
+
+-v3.0.19done-----------------------------------------------------------
+-VSQに，プリメジャー部分のコントロールカーブの値が出力されるのを修正
+
+-v3.0.18done-----------------------------------------------------------
+-VSQファイルまたはXVSQファイルのパスをCadencii.exeの第一引数にすると、自動で読み込むようにした。（XVSQ、VSQをCadenciiで開くよう関連付けておくと、ダブルクリックしたファイルが自動で開かれるようにした）
+-歌詞にコンマが含まれるVSQを正しく読み込めないのを修正(trunkのを移植)
+-プリメジャーの範囲内にのみにコントロールカーブを書いた場合、プリメジャー以降のコントロールカーブの値がVSQに正しく出力されないのを修正。
+-デフォルトの音声合成システムを設定できるようにする
+-音節に分けられる英単語が入力された場合の処理。AppManager.inputTextBoxのイベントハンドラ処理
+-歌詞インポート時の、英単語の処理
+
+-v3.1.4done------------------------------------------------------------
+-UTAU用のプラグインを使う機能で、[#SETTING]セクションに余分なものを出力していたのを修正
+-Cadencii.exeの起動時の引数に-resources [path]を指定することで、リソースファイルの読込み場所を変えられるようにした
+-UTAU用のプラグインを使う機能で、プラグインの編集結果の反映方法が正しくなかったのを修正
+
+-v3.1.3done------------------------------------------------------------
+-起動時に1回だけスクリプトが自動実行されるようにした．（名前がRunOnceとなっているもののみ。隠し設定を含めここで変更可能）
+-ensureVisibleのY座標版を作る。
+-本体の起動に失敗したとき，ダイアログで例外内容を表示するようにした．
+-Shift + ←↑↓→：フォーカス中の音符を自由移動(1グリッド単位or最小単位で上下左右に移動)
+-VOCALOID1がインストールされていないPCで起動しようとするとクラッシュするのを修正
+-Ctrl + ← or →：フォーカス中の音符の音長を短縮延長(1グリッド単位or最小単位で増減)
+-ゲームパッドがつないであると縦スクロールが暴走する場合がある
+-英語の歌手で音が鳴らない場合がある
+-グリッドラインを表示すると，ピアノロール上のいろんなものが破線になってしまう
+-ナビゲーション・ペインの左端にある+-ボタンがでかくて若干はみ出すことがあるのを修正。
+-プロパティウィンドウで音符の位置を指定するとき、小節、拍、Tickで指定できるようにした。
+-ピアノロール上の右クリックでコンテキストメニューを表示するのを廃止。
+-ピアノロールで右ダブルクリックでツールを鉛筆⇔ポインターに切り替えられるようにした。
+-音符の長さを編集する箇所に、VibratoLengthEditingRuleで場合分けと長さ制限についての処理を追加する
+-SelectedEventEntry#set__Lengthで，ゲートタイム長さに制限がかかる場合の処理を書き加える
+-音符の長さを変えたとき、ビブラート長さがどう影響を受けるかを切り替えられるようにした（ビブラート長さが保存される、ビブラート開始位置までのディレイが保存される、音符の長さに対するビブラート長さの割合が保存される、の3択）
+-Ctrl + HOMEでスタートマーカーへ移動するようにした
+-Ctrl + ENDでエンドマーカーへ移動するようにした
+
+-v3.0.17done-----------------------------------------------------------
+-org.kbinani.java.util.IteartorをIterator<E>に書き換えた
+-VibratoHandleをVibratoConfigにキャストしようとしてクラッシュするのを修正（凡ミス）
+
+-v3.0.16done-----------------------------------------------------------
+-スクリプトの設定xmlにエラーがあると、スクリプトが使えなくなるのを修正
+-スクリプトの保存項目に、型引数のある型（List<string>など）があるとスクリプトをコンパイルできないのを修正
+-STRAIGHT x UTAUモードで，クリアネス・ブライトネスが反映されないのを修正
+-ゲームパッドがつないであると縦スクロールが暴走する場合がある
+-英語の歌手で音が鳴らない場合がある
+
+-v3.1.2done------------------------------------------------------------
+-org.kbinani.cadencii.utilのコード、ファイルマッピングの名前が被る可能性があるので、一意なIDを付けるように変更する。GUID
+-音符の表示幅が28ピクセルよりも小さい場合のツールの当たり判定を改善
+-ブレス記号(br1 etc.)を無効な発音記号と誤認する不具合を修正
+-拍子変更が2個以上登録されたSMFをインポートしようとするとクラッシュするのを修正
+-Deleteがショートカットキーとして設定されている場合，歌詞入力時にDeleteキーが効かなくなるのを修正
+-設定画面で、利用するDLLが増減した場合、再起動後に有効になる旨ダイアログを出す.
+-scriptの位置がApplication Data/...に変更されたのに、反映されていない部分がある@FormMain
+-PlaySound#setResolutionを使えるようにする
+-と同時に，再生時のブロックサイズを設定できるようにする．
+-ピアノロールへのPITのオーバーレイ機能．PBSが正しく反映されていない
+-「Cadencii %1」でファイルを開けるようにした．
+-UTAUのFlagsプロパティを，プロパティウィンドウで編集できるようにした．
+-スクリプトのデフォルトの保存場所を，Cadencii/scriptから，%APPDATA%/Boare/Cadencii/scriptに変更した．
+-パレットツールのデフォルトの保存場所を，Cadencii/toolsから，%APPDATA%/Boare/Cadencii/toolsに変更した．
+-Utau Plugin Invokerが書きかけ．PIT,PBSを取得する部分から．
+-スクリプトのメニューの階層を1個浅くする。直で実行できるように。
+-スクリプト起動中はモーダルダイアログを出すなどしてメイン画面での編集を回避する必要がある．
+-CadenciiからUTAUのプラグインを呼び出す仕組み->./ScriptImplement/Utau Plugin Invoker.cs + ./ScriptImplement/UTAU Plugin Manager.cs
+-VsqEventItemProxyを削除し，機能をSelectedEventEntryに組み込んだ
+
+-v3.0.15done-----------------------------------------------------------
+-音符の表示幅が28ピクセルよりも小さい場合のツールの当たり判定を改善
+-ブレス記号(br1 etc.)を無効な発音記号と誤認する不具合を修正
+-拍子変更が2個以上登録されたSMFをインポートしようとするとクラッシュするのを修正
+-Deleteがショートカットキーとして設定されている場合，歌詞入力時にDeleteキーが効かなくなるのを修正
+
+-v3.1.1done------------------------------------------------------------
+-PhonemeTransformationの機能を実装
+-VOCALOID1で出力したVOCALOID MIDIの読み込みが失敗するのを修正
+-英語のデフォルト辞書を実装
+-英語音源と日本語音源で，VSQへの歌詞の格納方法が異なるのに対応
+-LOLA他，歌唱言語を判定できない者が居たのを修正
+-VSQファイルの読み込み速度を改善()
+-Windows 7で、util.dllが使えない・・・←DEP(?)に未対応のフラグを立てるとイケル．本体Cadencii.exeにもこの処理をする必要があるが，これは「editbin.exe /NXCOMPAT:NO Cadencii.exe」とやればよい．editbinは，VisualStudioのinstall dir\VC\binにある．
+-再生がずれる場合がある不具合を修正．
+-既存のテンポが変更できないのを修正．
+-既存の拍子変更が変更できないのを修正．
+-スクリプト「Render to UTAU」が実行できないのを修正．
+
+-v3.0.12done-----------------------------------------------------------
+-VOCALOID1で出力したVOCALOID MIDIの読み込みが失敗するのを修正
+-英語のデフォルト辞書を実装
+-英語音源と日本語音源で，VSQへの歌詞の格納方法が異なるのに対応
+-LOLA他，歌唱言語を判定できない者が居たのを修正
+-再生がずれる場合がある不具合を修正．
+-既存のテンポが変更できないのを修正．
+-既存の拍子変更が変更できないのを修正．
+-スクリプト「Render to UTAU」が実行できないのを修正．
+
+-v3.0.11done-----------------------------------------------------------
+-プレビュー再生の開始／停止に関する不具合を修正
+
+-v3.0.10done-----------------------------------------------------------
+-EnterまたはSpaceを長押しすると、エラーダイアログがたくさん出た後クラッシュするのを修正。
+-DivideNoteがクラッシュする場合があるのを修正。
+
+-v3.0.9done------------------------------------------------------------
+-メトロノームの試聴中に，「ベルを鳴らす」のチェックを外すと試聴が解除される．(trunk/branches共に)
+-起動直後に，trackBarの上にhScrollが被さっている状態になることがある．
+-Dynamicsの分解能の設定が毎回リセットされる不具合を修正。
+-ピアノロール画面でCTRLキーを押しながら音符選択するモードで、選択範囲のクオンタイズがONになっている時選択範囲が1ゲートタイムほどずれる場合があるのを修正。
+
+-v3.1.0done------------------------------------------------------------
+-ピアノロールの鍵盤部分とスクロールバーの部分でのホイール操作を、縦方向のスクロールに割り当てる
+
+-v3.0.6(3.1.0)done-----------------------------------------------------
+-bug0018[2Nov2009_1959JST_かつ-01]ショートカットキーが設定できなくなっている。
+-ショートカットキーにPageDown, PageUp, Home, Endが設定できない。（リストが上下するのみ）
+-USE_SCRIPTコンパイルフラグを立てる。（スクリプトとパレットツールの有効/無効切り替え）
+-BPictureBox->PictureBoxExにしてしまったのを，元に戻す
+-リソースを自前でexeに埋め込む仕組み(for Java port, MAKEで起動するかんじのやつを)->makeRes.cs
+-VolumeTracker.javaをsvn add
+-UTAUのustを読み込むとき、[#0001]の数字部分が正しく読み込めない不具合を修正。
+-BFileChooserでクラッシュ。ファイル　開く　何もせずにキャンセル
+-DivideNote.csで，パレットツールの設定を読み込んだときstatic Modifierがnullなせいでクラッシュする不具合を修正．
+-パレットツールが例外を返したときの処理を加える（現状だとCadencii本体もろとも落ちてまう）．
+-VsqFileEx#.ctor( UstFile )をVsqFile#.ctor( UstFile )に移動
+-Form*.Designer.csのInitializeComponentから，リソースを指定するメソッド（initializeResources）と，イベントを登録するメソッド（registerEventHandlers）を抽出するユーティリティ->extractEventHandlerAndResource.cs
+-音源DBのインストール箇所がデフォルトと違う場合に、音源DBが検出されない不具合を修正。
+-oto.iniに小数点が含まれていると音ヌケが発生する不具合を修正。
+-AppManager.keyWidthを更新する時、動かしてる最中には、動かし始める直前の状態に復帰可能なら復帰させた状態を表示する
+
+-v3.0.5done------------------------------------------------------------
+-bug0017[1Nov2009_1056JST_228-01]「Cadenciiについて」のクレジットの表示がなくなっている。
+-bug0016[1Nov2009_1154JST_whimsoft-01]VOCALOID2でwave出力したものより、再生速度が速くなる場合がある
+
+-v3.0.4done------------------------------------------------------------
+-レンダラを切り替えた直後、歌手の読み替えがうまくいっていない。これが原因で、UTAUの原音が識別されず音が出ないときがある
+
+-v3.0.4done internal---------------------------------------------------
+-xvsqと同時出力されるVSQファイルが壊れている。
+-MIDIエクスポート時のMTrkヘッダがおかしい（Dominoなどで読み込めない）
+-ustファイルの読み込み時に，見えない音符がインポートされてしまう不具合．
+-レンダリング時に出るダイアログの残り時間が負の値になる場合がある．
+-MIDIエクスポート時に，音符->Checked, vocaloid meta-text->Disabled，vocaloid meta-text->Checkedという状態が可能になり，出力されないはずのmeta-textが出力されてしまう．
+-ファイル　書き出し　WAVで、書き出したwaveファイルがステレオになっていて正しく再生できない。
+-TrackSelectorの、縦線が微妙に短い部分がある。（SINGERの右下）
+-歌詞入力中、タブキーで移動後にIMEの状態が保存されない。
+-MIDIインポート時に、同じ音程の音符が連続している場合に、長さ0で登録されてしまう場合がある。
+-レンダリング時にでるダイアログで、残り時間が常に[unknown]になる（VOCALOID1/2）。
+-設定ダイアログの「シーケンスの設定」で、デフォルトのビブラート長が0, 1, 2, 3になっている。
+-[HALさん]StarightxUTAUで歌手切り替え時にエラーが出る。→16個目以降の音符または歌手変更イベントの追加をやろうとするとクラッシュする．
+-歌詞編集直後に，変更した音符の位置を変えると歌詞が元に戻る（他の音符を選択した後だと問題ない）．
+-[20Oct2009_2313JST_5さん-02]VEL, Accent, Decayのバーのところにマウスが行っても、カーソルが変わらない。マウスを長押ししないと編集モードに移行しない
+-[21Oct2009_0014JST_HALさん-01]usqに出力するコントロールトラックに問題あり？リアルタイム再生でノイズが乗る。
+-[20Oct2009_2313JST_5さん-01]ベジエ曲線編集のUNDO/REDOで、付随するコントロールのデータ点が完全に元に戻らない。
+-[21Oct2009-1734JST_kbinani-02]ベジエ曲線のカット＆ペーストにて，ベジエ曲線の中ほどからベジエ曲線終了位置よりも後ろを選択した状態（選択範囲が，ちょうどベジエ曲線終了位置をまたいでいる場合）に，カット後ベジエ曲線が切り取られず残留する．（コントロールカーブのデータ点は，正しく切り取られる）
+-[21Oct2009_1734JST_kbinani-01]ベジエ曲線が既に存在する部分に，さらにベジエ曲線を貼り付けると，コントロールカーブがぎざぎざになる．（ベジエ曲線のmergeは，正しく行われる）
+-vConnectに渡すパラメータに、BRI, CLE, PMBendLength, PMBendDepthを追加。
+-[20Oct2009_2313JST_5さん-03]たくさんの種類のコントロールカーブを表示していると、下のほうの表示が見切れてしまう場合がある。
+-VEL,鉛筆モードのとき，カーソルの形が変わってしまう
+-ベジエ曲線のデータ点が残り1個になったとき，Undoしてもベジエ曲線が消えない．（最初のベジエをドラッグせずに単独の点で打ち込んだ場合）
+-bug0010[24Oct2009_2222JST_b2ox-01]スクリプトのコンパイルエラーが表示されない（Compilation Failedのみ）
+-スクリプトのメンテナンス
+-bug0011[24Oct2009_1534JST_13-01]小節の挿入ダイアログで，「第」のラベルが隣のテキストボックスに被っている
+-bug0012[24Oct2009_1534JST_13-02]Undo/Redo操作後，BGMのメニューの状態が更新されない．
+-フォームを閉じるとき．「保存しますか」ダイアログのキャンセルを押しても，終了してしまう．
+-ダイアログを閉じた後，メインウィンドウにフォーカスが戻らない場合がある．（AppManager.showMessageBox...)
+-コントロールカーブの値入力ダイアログで、Undo/Redoボタンが無い。
+-bug0013[27Oct2009_2154JST_HAL-01]歌詞入力用のテキストボックスが出た状態で、他の音符をクリックすると、クリックした音符に入力内容が移ってしまう。
+-bug0015[27Oct2009_0744JST_19-01]マウスを押したボタンに応じてパレットツールの動作が変わるはずなのに変わらない．
+-ウィンドウを最小化した後最大化すると，hScrollのboxが小さくなっている．
+-リアルタイム入力状態で、新規作成などでプロジェクトを切り替えても入力状態が続いてしまう。
+-リアルタイム入力終了時、menuJobRealtimeのTextが更新されない。
+-[cancelled]bug0014[27Oct2009_2217JST_かつ-01]MIDIをインポート後、不安定になる（消しゴムがちゃんと動作しない？）。
+-pictOverviewで、スペース+LeftがMiddleボタンとみなされない。
+-pictOverviewで、両端の>、<ボタンを押すと発動するスレッドがアプリ終了まで止まらない場合がある。
+-[PlaySound.cpp]appendで，ブロックサイズ以上のappendが要求された場合に，途中でabort要求が来ても全てが出力されるまで出力を続けてしまう．（見かけ上，異常な高負荷状態になる）
+-スペースキーの意味を、「再生・停止ショートカット」か、「マウス左ボタンを真ん中ボタンとみなすための修飾キー」のどちらかに切り替えられるようにした。
+-Straight x UTAUで，wave書き出しすると，最後に「あー」が入る．
+-BGM関連の編集が、setEdited(true)されない。
+-StraightRenderingRunnerで、BGMのWAVが正しく再生されない。
+-BGMの、プリメジャー位置から開始」などの変更が、Undo履歴に保存されない。
+-設定ダイアログでUTAU音源を削除した直後、歌詞変更イベントのコンテキストメニューの中身が更新されない。
+

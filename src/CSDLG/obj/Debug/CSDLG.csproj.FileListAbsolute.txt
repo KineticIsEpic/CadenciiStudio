@@ -1,0 +1,10 @@
+M:\another folder\cadencii-master\src\CSDLG\obj\Debug\CSDLG.csprojResolveAssemblyReference.cache
+M:\another folder\cadencii-master\src\CSDLG\obj\Debug\CSDLG.AboutDlg.resources
+M:\another folder\cadencii-master\src\CSDLG\obj\Debug\CSDLG.Launch.resources
+M:\another folder\cadencii-master\src\CSDLG\obj\Debug\CSDLG.Properties.Resources.resources
+M:\another folder\cadencii-master\src\CSDLG\obj\Debug\CSDLG.csproj.GenerateResource.Cache
+M:\another folder\cadencii-master\src\CSDLG\bin\Debug\CSDLG.exe.config
+M:\another folder\cadencii-master\src\CSDLG\bin\Debug\CSDLG.exe
+M:\another folder\cadencii-master\src\CSDLG\bin\Debug\CSDLG.pdb
+M:\another folder\cadencii-master\src\CSDLG\obj\Debug\CSDLG.exe
+M:\another folder\cadencii-master\src\CSDLG\obj\Debug\CSDLG.pdb

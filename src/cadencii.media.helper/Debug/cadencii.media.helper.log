@@ -1,0 +1,15 @@
+﻿Build started 4/20/2015 5:06:35 PM.
+     1>Project "M:\another folder\cadencii-master\src\cadencii.media.helper\cadencii.media.helper.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D CADENCIIMEDIAHELPER_EXPORTS /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SoundDriver.cpp
+         SoundDriver.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(M:\another folder\cadencii-master\src\Debug\cadencii.media.helper.dll) does not match the Linker's OutputFile property value (M:\another folder\cadencii-master\src\Cadencii\bin\x86\Debug\cadencii.media.helper.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"M:\another folder\cadencii-master\src\Cadencii\bin\x86\Debug\cadencii.media.helper.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"M:\another folder\cadencii-master\src\Debug\cadencii.media.helper.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"M:\another folder\cadencii-master\src\Debug\cadencii.media.helper.lib" /MACHINE:X86 /DLL Debug\SoundDriver.obj
+            Creating library M:\another folder\cadencii-master\src\Debug\cadencii.media.helper.lib and object M:\another folder\cadencii-master\src\Debug\cadencii.media.helper.exp
+         cadencii.media.helper.vcxproj -> M:\another folder\cadencii-master\src\Debug\cadencii.media.helper.dll
+     1>Done Building Project "M:\another folder\cadencii-master\src\cadencii.media.helper\cadencii.media.helper.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.40

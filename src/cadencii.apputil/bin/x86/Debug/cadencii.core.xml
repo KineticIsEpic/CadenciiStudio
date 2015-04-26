@@ -1,0 +1,888 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cadencii.core</name>
+    </assembly>
+    <members>
+        <member name="F:cadencii.java.awt.Color.bkgColor">
+            <summary>
+            Background color for CadenciiStudio.
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.black">
+            <summary>
+            黒を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.BLACK">
+            <summary>
+            黒を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.blue">
+            <summary>
+            青を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.BLUE">
+            <summary>
+            青を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.cyan">
+            <summary>
+            シアンを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.CYAN">
+            <summary>
+            シアンを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.DARK_GRAY">
+            <summary>
+            ダークグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.darkGray">
+            <summary>
+            ダークグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.gray">
+            <summary>
+            グレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.GRAY">
+            <summary>
+            グレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.green">
+            <summary>
+            緑を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.GREEN">
+            <summary>
+            緑を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.LIGHT_GRAY">
+            <summary>
+            ライトグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.lightGray">
+            <summary>
+            ライトグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.magenta">
+            <summary>
+            マゼンタを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.MAGENTA">
+            <summary>
+            マゼンタを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.orange">
+            <summary>
+            オレンジを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.ORANGE">
+            <summary>
+            オレンジを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.pink">
+            <summary>
+            ピンクを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.PINK">
+            <summary>
+            ピンクを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.red">
+            <summary>
+            赤を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.RED">
+            <summary>
+            赤を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.white">
+            <summary>
+            白を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.WHITE">
+            <summary>
+            白を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.yellow">
+            <summary>
+            黄を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.YELLOW">
+            <summary>
+            黄を表します。 
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Polygon.npoints">
+            <summary>
+            点の総数です。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Polygon.xpoints">
+            <summary>
+            X 座標の配列です。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Polygon.ypoints">
+            <summary>
+            Y 座標の配列です。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.FileOutputStream.flush">
+            <summary>
+            出力ストリームをフラッシュして、バッファリングされていたすべての出力バイトを強制的にストリームに書き込みます。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.FileOutputStream.write(System.Byte[])">
+            <summary>
+            b.length バイトのデータを出力ストリームに書き込みます。
+            </summary>
+            <param name="b"></param>
+        </member>
+        <member name="M:cadencii.java.io.FileOutputStream.write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            指定された byte 配列の、オフセット位置 off から始まる len バイトを出力ストリームに書き込みます。
+            </summary>
+            <param name="b"></param>
+            <param name="off"></param>
+            <param name="len"></param>
+        </member>
+        <member name="M:cadencii.java.io.FileOutputStream.write(System.Int32)">
+            <summary>
+            指定された byte を出力ストリームに書き込みます。
+            </summary>
+            <param name="b"></param>
+        </member>
+        <member name="M:cadencii.java.io.File.#ctor(System.String)">
+            <summary>
+            指定されたパス名文字列を抽象パス名に変換して、新しい File のインスタンスを生成します。
+            </summary>
+            <param name="pathname"></param>
+        </member>
+        <member name="M:cadencii.java.io.File.canExecute">
+            <summary>
+            この抽象パス名が示すファイルをアプリケーションが実行できるかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.canRead">
+            <summary>
+            この抽象パス名が示すファイルをアプリケーションが読み込めるかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.canWrite">
+            <summary>
+            この抽象パス名が示すファイルをアプリケーションが変更できるかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.compareTo(cadencii.java.io.File)">
+            <summary>
+            2 つの抽象パス名を語彙的に比較します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.createNewFile">
+            <summary>
+            この抽象パス名が示す空の新しいファイルを不可分 (atomic) に生成します (その名前のファイルがまだ存在しない場合だけ)。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.createTempFile(System.String,System.String)">
+            <summary>
+            指定された接頭辞と接尾辞をファイル名の生成に使用して、デフォルトの一時ファイルディレクトリに空のファイルを生成します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.createTempFile(System.String,System.String,cadencii.java.io.File)">
+            <summary>
+            指定されたディレクトリで新しい空のファイルを生成し、その名前には、指定された接頭辞および接尾辞の文字列が使用されます。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.delete">
+            <summary>
+            この抽象パス名が示すファイルまたはディレクトリを削除します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.deleteOnExit">
+            <summary>
+            この抽象パス名が示すファイルまたはディレクトリが、仮想マシンが終了したときに削除されるように要求します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.equals(System.Object)">
+            <summary>
+            この抽象パス名が指定されたオブジェクトと等しいかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.exists">
+            <summary>
+            この抽象パス名が示すファイルまたはディレクトリが存在するかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getAbsoluteFile">
+            <summary>
+            この抽象パス名の絶対形式を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getAbsolutePath">
+            <summary>
+            この抽象パス名の絶対パス名文字列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getCanonicalFile">
+            <summary>
+            この抽象パス名の正規の形式を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getCanonicalPath">
+            <summary>
+            この抽象パス名の正規のパス名文字列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getFreeSpace">
+            <summary>
+            この抽象パス名で指定されるパーティション内で未割り当てのバイト数を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getName">
+            <summary>
+            この抽象パス名が示すファイルまたはディレクトリの名前を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getParent">
+            <summary>
+            この抽象パス名の親のパス名文字列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getParentFile">
+            <summary>
+            この抽象パス名の親の抽象パス名を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getPath">
+            <summary>
+            この抽象パス名をパス名文字列に変換します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getTotalSpace">
+            <summary>
+            この抽象パス名で指定されるパーティションのサイズを返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.getUsableSpace">
+            <summary>
+            この抽象パス名で指定されるパーティション上で、この仮想マシンが利用できるバイト数を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.hashCode">
+            <summary>
+            この抽象パス名のハッシュコードを計算します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.isAbsolute">
+            <summary>
+            この抽象パス名が絶対かどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.isDirectory">
+            <summary>
+            この抽象パス名が示すファイルがディレクトリであるかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.isFile">
+            <summary>
+            この抽象パス名が示すファイルが普通のファイルかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.isHidden">
+            <summary>
+            この抽象パス名が示すファイルが隠しファイルかどうかを判定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.lastModified">
+            <summary>
+            この抽象パス名が示すファイルが最後に変更された時刻を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.length">
+            <summary>
+            この抽象パス名に指定されているファイルの長さを返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.list">
+            <summary>
+            この抽象パス名が示すディレクトリにあるファイルおよびディレクトリを示す文字列の配列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.list(cadencii.java.io.FilenameFilter)">
+            <summary>
+            この抽象パス名が示すディレクトリにあるファイルおよびディレクトリの中で、指定されたフィルタの基準を満たすものの文字列の配列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.listFiles">
+            <summary>
+            この抽象パス名が示すディレクトリ内のファイルを示す抽象パス名の配列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.listFiles(cadencii.java.io.FileFilter)">
+            <summary>
+            この抽象パス名が示すディレクトリにあるファイルおよびディレクトリの中で、指定されたフィルタの基準を満たすものの抽象パス名の配列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.listFiles(cadencii.java.io.FilenameFilter)">
+            <summary>
+            この抽象パス名が示すディレクトリにあるファイルおよびディレクトリの中で、指定されたフィルタの基準を満たすものの抽象パス名の配列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.listRoots">
+            <summary>
+            有効なファイルシステムのルートをリスト表示します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.mkdir">
+            <summary>
+            この抽象パス名が示すディレクトリを生成します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.mkdirs">
+            <summary>
+            この抽象パス名が示すディレクトリを生成します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.renameTo(cadencii.java.io.File)">
+            <summary>
+            この抽象パス名が示すファイルの名前を変更します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setExecutable(System.Boolean)">
+            <summary>
+            この抽象パス名に所有者の実行権を設定する簡易メソッドです。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setExecutable(System.Boolean,System.Boolean)">
+            <summary>
+            この抽象パス名に所有者または全員の実行権を設定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setLastModified(System.Int64)">
+            <summary>
+            この抽象パス名が示すファイルまたはディレクトリが変更された時刻を設定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setReadable(System.Boolean)">
+            <summary>
+            この抽象パス名に所有者の読み取り権を設定する簡易メソッドです。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setReadable(System.Boolean,System.Boolean)">
+            <summary>
+            この抽象パス名に所有者または全員の読み取り権を設定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setReadOnly">
+            <summary>
+            この抽象パス名が示すファイルまたはディレクトリにマークを設定し、読み込みオペレーションだけが許可されるようにします。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setWritable(System.Boolean)">
+            <summary>
+            この抽象パス名に所有者の書き込み権を設定する簡易メソッドです。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.setWritable(System.Boolean,System.Boolean)">
+            <summary>
+            この抽象パス名に所有者または全員の書き込み権を設定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.io.File.toString">
+            <summary>
+            この抽象パス名のパス名文字列を返します。
+            </summary>
+        </member>
+        <member name="M:cadencii.math.gcd(System.Int64,System.Int64)">
+            <summary>
+            2つの整数の最大公約数を返します。
+            </summary>
+            <param name="m"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.Misc.obj_clone(System.Object)">
+            <summary>
+            Reflectionを利用して、インスタンスのディープなクローニングを行います。
+            クローン操作の対象はインスタンスのフィールドであり、値型のものは単なる代入を、
+            参照型の物であってかつClone(void)メソッドが実装されているものはCloneしたものを、
+            それ以外は単に参照が代入されます
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.Misc.get_executing_types">
+            <summary>
+            現在の実行アセンブリで使用されている型のリストを取得します
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.Misc.get_executing_namespaces">
+            <summary>
+            現在の実行アセンブリで使用されている名前空間のリストを取得します
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.getComponentName(System.Object)">
+            <summary>
+            java:コンポーネントのnameプロパティを返します。C#:コントロールのNameプロパティを返します。
+            objがnullだったり、型がComponent/Controlでない場合は空文字を返します。
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.getCurrentTime">
+            <summary>
+            単位は秒
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.getbytes_uint16_le(System.Int32)">
+            <summary>
+            compatible to BitConverter
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.make_uint16_le(System.Byte[],System.Int32)">
+            <summary>
+            compatible to BitConverter
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.make_int16_le(System.Byte[],System.Int32)">
+            <summary>
+            compatible to BitConverter
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.charAt(System.String,System.Int32)">
+            <summary>
+            文字列の指定した位置の文字を取得します
+            </summary>
+            <param name="s">文字列</param>
+            <param name="index">位置．先頭が0</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.isPointInScreens(cadencii.java.awt.Point)">
+            <summary>
+            指定した点が，コンピュータの画面のいずれかに含まれているかどうかを調べます
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            デバイス情報オブジェクトを構築します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.equals(System.Object)">
+            <summary>
+            2つのオブジェクトが等しいかどうかを報告します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getDescription">
+            <summary>
+            デバイスの説明を取得します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getName">
+            <summary>
+            デバイスの名前を取得します。
+            </summary>          
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getVendor">
+            <summary>
+            デバイスの供給会社の名前を取得します。
+            </summary> 
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getVersion">
+            <summary>
+            デバイスのバージョンを取得します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.toString">
+            <summary>
+            デバイス情報の文字列表現を提供します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiMessage.#ctor(System.Byte[])">
+            <summary>
+            本来はprotected
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Receiver.close">
+            <summary>
+            アプリケーションによるレシーバの使用が終了し、レシーバが要求する限られたリソースを解放または使用可能にできることを示します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Receiver.send(cadencii.javax.sound.midi.MidiMessage,System.Int64)">
+            <summary>
+            MIDI メッセージおよび時刻表示をこのレシーバに送信します。
+            </summary>          
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Transmitter.close">
+            <summary>
+            アプリケーションによるレシーバの使用が終了し、トランスミッタが要求する限られたリソースを解放または使用可能にできることを示します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Transmitter.getReceiver">
+            <summary>
+            このトランスミッタで MIDI メッセージを配信する現在のレシーバを取得します。
+            </summary>          
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Transmitter.setReceiver(cadencii.javax.sound.midi.Receiver)">
+            <summary>
+            このトランスミッタで MIDI メッセージを配信するレシーバを設定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.clear">
+            <summary>
+            マップからマッピングをすべて削除します (任意のオペレーション)。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.containsKey(System.Object)">
+            <summary>
+            マップが指定のキーのマッピングを保持する場合に true を返します。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.containsValue(System.Object)">
+            <summary>
+            マップが 1 つまたは複数のキーと指定された値をマッピングしている場合に true を返します。
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.entrySet">
+            <summary>
+            このマップに含まれるマップの Set ビューを返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.equals(System.Object)">
+            <summary>
+            指定されたオブジェクトがこのマップと等しいかどうかを比較します。
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.get(System.Object)">
+            <summary>
+            指定されたキーがマップされている値を返します。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.hashCode">
+            <summary>
+            マップのハッシュコード値を返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Map`2.isEmpty">
+            <summary>
+            マップがキーと値のマッピングを保持しない場合に true を返します。    }
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.add(`0)">
+            <summary>
+            指定された要素がセット内になかった場合、セットに追加します (任意のオペレーション)。
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.addAll(cadencii.java.util.Collection{`0})">
+            <summary>
+            指定されたコレクションのすべての要素について、その要素がこのセット内にない場合、セットに追加します (任意のオペレーション)。
+            </summary>
+            <param name="extends"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.clear">
+            <summary>
+            セットからすべての要素を削除します (任意のオペレーション)。
+            </summary>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.contains(System.Object)">
+            <summary>
+            セットが、指定された要素を保持している場合に true を返します。
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.containsAll(cadencii.java.util.Collection{`0})">
+            <summary>
+            指定されたコレクションのすべての要素がセット内にある場合に true を返します。
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.equals(System.Object)">
+            <summary>
+            指定されたオブジェクトがセットと同じかどうかを比較します。
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.hashCode">
+            <summary>
+            セットのハッシュコード値を返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.isEmpty">
+            <summary>
+            セットが要素を 1 つも保持していない場合に true を返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.iterator">
+            <summary>
+            セット内の各要素についての反復子を返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.remove(System.Object)">
+            <summary>
+            指定された要素がセット内にあった場合、セットから削除します (任意のオペレーション)。
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.removeAll(cadencii.java.util.Collection{`0})">
+            <summary>
+            このセットから、指定されたコレクションに含まれる要素をすべて削除します (任意のオペレーション)。
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.retainAll(cadencii.java.util.Collection{`0})">
+            <summary>
+            セット内の要素のうち、指定されたコレクション内にある要素だけを保持します (任意のオペレーション)。
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.size">
+            <summary>
+            セット内の要素数 (そのカーディナリティ) を返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.toArray">
+            <summary>
+            セット内のすべての要素が格納されている配列を返します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.java.util.Set`1.toArray``1(``0[])">
+            <summary>
+            セット内のすべての要素を格納している配列を返します。
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="M:cadencii.win32.RegOpenKeyExW(System.UInt32,System.String,System.UInt32,System.UInt32,System.UInt32*)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <param name="pSubKey">オープンするサブキーの名前</param>
+            <param name="ulOptions">予約（0を指定）</param>
+            <param name="samDesired">セキュリティアクセスマスク</param>
+            <param name="phkResult">ハンドルを格納する変数のアドレス</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.RegEnumKeyExW(System.UInt32,System.UInt32,System.String,System.UInt32*,System.UInt32*,System.String,System.UInt32*,cadencii.FILETIME*)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <param name="dwIndex">サブキーのインデックス</param>
+            <param name="pName">サブキー名を格納するバッファ</param>
+            <param name="pcbName">pName のサイズを入れた変数</param>
+            <param name="pReserved">予約（NULLを指定）</param>
+            <param name="pClass">クラス名を格納するバッファ</param>
+            <param name="pcbClass">pClass のサイズを入れた変数</param>
+            <param name="pftLastWrite">最終書き込み時間</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.RegQueryValueExW(System.UInt32,System.String,System.UInt32*,System.UInt32*,System.Byte*,System.UInt32*)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <param name="pValueName">値の名前</param>
+            <param name="pReserved">予約（NULLを指定）</param>
+            <param name="pType">データタイプを格納する変数</param>
+            <param name="pData">データを格納するバッファ</param>
+            <param name="pcbData">バッファサイズを入れた変数</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.RegCloseKey(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.CreateFileW(System.String,System.UInt32,System.UInt32,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpFileName">ファイル名(LPCTSTR)</param>
+            <param name="dwDesiredAccess">アクセスモード(DWORD)</param>
+            <param name="dwShareMode">共有モード(DWORD)</param>
+            <param name="lpSecurityAttributes">セキュリティ記述子(LPSECURITY_ATTRIBUTES)</param>
+            <param name="dwCreationDisposition">作成方法(DWORD)</param>
+            <param name="dwFlagsAndAttributes">ファイル属性(DWORD)</param>
+            <param name="hTemplateFile">テンプレートファイルのハンドル(HANDLE)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.CreateDirectoryW(System.String,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpPathName">ディレクトリ名(LPCTSTR)</param>
+            <param name="lpSecurityAttributes">セキュリティ識別子(LPSECURITY_ATTRIBUTES)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.GetFileAttributesW(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lpFileName">ファイルまたはディレクトリの名前(LPCWSTR)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.GetFullPathNameW(System.String,System.UInt32,System.Text.StringBuilder,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpFileName">ファイル名(LPCTSTR)</param>
+            <param name="nBufferLength">パス名を格納するバッファのサイズ(DWORD)</param>
+            <param name="lpBuffer">パス名を格納するバッファ(LPTSTR)</param>
+            <param name="lpFilePart">パス内のファイル名のアドレス(LPTSTR*)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.InitializeCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">元はLPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.DeleteCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">元はLPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.LeaveCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">もとはLPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.EnterCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">LPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.GetModuleFileName(System.IntPtr,System.IntPtr,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="hModule">モジュールのハンドル(HANDLE)</param>
+            <param name="lpFilename">モジュールのファイル名(LPTSTR)</param>
+            <param name="nSize">バッファのサイズ</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.InvalidateRect(System.IntPtr,System.IntPtr,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd">ウィンドウのハンドル</param>
+            <param name="lpRect">長方形の座標(CONST RECT *lpRect)</param>
+            <param name="bErase">消去するかどうかの状態</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.ClientToScreen(System.IntPtr,cadencii.POINT@)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd">ウィンドウのハンドル</param>
+            <param name="lpPoint">クライアント座標</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.SetMenu(System.IntPtr,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd">ウィンドウのハンドル</param>
+            <param name="hMenu">メニューのハンドル</param>
+            <returns></returns>
+        </member>
+        <member name="F:cadencii.TBBUTTONINFO.lParam">
+            <summary>
+            DWORD_PTR
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hSubMenu">
+            <summary>
+            HMENU
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hbmpChecked">
+            <summary>
+            HBITMAP
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hbmpUnchecked">
+            <summary>
+            HBITMAP
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.dwItemData">
+            <summary>
+            ULONG_PTR
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hbmpItem">
+            <summary>
+            HBITMAP
+            </summary>
+        </member>
+    </members>
+</doc>

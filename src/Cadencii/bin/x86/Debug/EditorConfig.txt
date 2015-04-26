@@ -1,0 +1,289 @@
+AutoBackupIntervalMinutes
+AutoVibratoCustom
+AutoVibratoThresholdLength
+AutoVibratoType1
+AutoVibratoType2
+AutoVibratoTypeCustom
+BandNewRowFile
+BandNewRowMeasure
+BandNewRowPosition
+BandNewRowTool
+BandOrderFile
+BandOrderMeasure
+BandOrderPosition
+BandOrderTool
+BandSizeFile
+BandSizeMeasure
+BandSizePosition
+BandSizeTool
+BaseFontName
+BaseFontSize
+BufferSizeMilliSeconds
+ChevronWidth
+ControlCurveResolution
+CursorFixed
+CurveSelectingQuantized
+CurveVisibleAccent
+CurveVisibleBreathiness
+CurveVisibleBrightness
+CurveVisibleClearness
+CurveVisibleDecay
+CurveVisibleDynamics
+CurveVisibleEnvelope
+CurveVisibleFx2Depth
+CurveVisibleGendorfactor
+CurveVisibleHarmonics
+CurveVisibleOpening
+CurveVisiblePbs
+CurveVisiblePit
+CurveVisiblePortamento
+CurveVisibleReso1
+CurveVisibleReso2
+CurveVisibleReso3
+CurveVisibleReso4
+CurveVisibleVelocity
+CurveVisibleVibratoDepth
+CurveVisibleVibratoRate
+DefaultDEMaccent
+DefaultDEMdecGainRate
+DefaultPMBendDepth
+DefaultPMBendLength
+DefaultPMbPortamentoUse
+DefaultSingerName
+DefaultSynthesizer
+DefaultVibratoLength
+DefaultXScale
+DoNotAskKeySoundGeneration
+DoNotAutomaticallyCheckForUpdates
+DoNotUseAquesTone
+DoNotUseAquesTone2
+DoNotUseVocaloid1
+DoNotUseVocaloid2
+EnableAutoVibrato
+FormIconPaletteLocation
+GameControlerCircle
+GameControlerCross
+GameControlerMinimumEventInterval
+GameControlerRectangle
+GameControlerTriangle
+GameControlL1
+GameControlL2
+GameControlPovDown
+GameControlPovLeft
+GameControlPovRight
+GameControlPovUp
+GameControlR1
+GameControlR2
+GameControlSelect
+GameControlStart
+GameControlStirckL
+GameControlStirckR
+IconPaletteVisible
+KeepLyricInputMode
+KeyWidth
+Language
+LastUsedExtension
+LastUsedPathIn
+LastUsedPathOut
+LengthQuantize
+LengthQuantizeTriplet
+MaximumFrameRate
+MidiImExportConfigExport
+MidiImExportConfigImport
+MidiImExportConfigImportVsq
+MidiInPort
+MidiInPortMtc
+MinimumScrollHandleWidth
+MixerVisible
+MouseDragIncrement
+MouseDragMaximumRate
+MouseHoverTime
+NumRecentFiles
+OverviewEnabled
+OverviewScaleCount
+PathAquesTone
+PathAquesTone2
+PathResampler
+PathResamplers
+PathWavtool
+PianoRollScaleY
+PlayPreviewWhenRightClick
+PositionQuantize
+PositionQuantizeTriplet
+PreSendTime
+PropertyWindowStatus
+PxTolerance
+PxToleranceBezier
+PxTrackHeight
+RecentFiles
+ResamplersWithWine
+ResamplerWithWine
+ScreenFontName
+ScrollHorizontalOnWheel
+SelfDeRomanization
+ShortcutKeys
+ShowExpLine
+ShowLyric
+SkipDrawWhilePlaying
+SpecialShortcutGoToFirst
+SplitContainer2LastDividerLocation
+UseProjectCache
+UserDictionaries
+UseSpaceKeyAsMiddleButtonModifier
+UseUserDefinedAutoVibratoType
+UseWideCharacterWorkaround
+UtauSingers
+ViewAtcualPitch
+ViewWaveform
+WavtoolWithWine
+WheelOrder
+WindowMaximized
+WindowRect
+WinePrefix
+WineTop
+WineTopBuiltin
+--------------------------------------------
+System.Int32	AutoBackupIntervalMinutes;
+cadencii.java.util.Vector`1[cadencii.vsq.VibratoHandle]	AutoVibratoCustom;
+System.Int32	AutoVibratoThresholdLength;
+System.String	AutoVibratoType1;
+System.String	AutoVibratoType2;
+System.String	AutoVibratoTypeCustom;
+System.Boolean	BandNewRowFile;
+System.Boolean	BandNewRowMeasure;
+System.Boolean	BandNewRowPosition;
+System.Boolean	BandNewRowTool;
+System.Int32	BandOrderFile;
+System.Int32	BandOrderMeasure;
+System.Int32	BandOrderPosition;
+System.Int32	BandOrderTool;
+System.Int32	BandSizeFile;
+System.Int32	BandSizeMeasure;
+System.Int32	BandSizePosition;
+System.Int32	BandSizeTool;
+System.String	BaseFontName;
+System.Single	BaseFontSize;
+System.Int32	BufferSizeMilliSeconds;
+System.Int32	ChevronWidth;
+cadencii.ClockResolution	ControlCurveResolution;
+System.Boolean	CursorFixed;
+System.Boolean	CurveSelectingQuantized;
+System.Boolean	CurveVisibleAccent;
+System.Boolean	CurveVisibleBreathiness;
+System.Boolean	CurveVisibleBrightness;
+System.Boolean	CurveVisibleClearness;
+System.Boolean	CurveVisibleDecay;
+System.Boolean	CurveVisibleDynamics;
+System.Boolean	CurveVisibleEnvelope;
+System.Boolean	CurveVisibleFx2Depth;
+System.Boolean	CurveVisibleGendorfactor;
+System.Boolean	CurveVisibleHarmonics;
+System.Boolean	CurveVisibleOpening;
+System.Boolean	CurveVisiblePbs;
+System.Boolean	CurveVisiblePit;
+System.Boolean	CurveVisiblePortamento;
+System.Boolean	CurveVisibleReso1;
+System.Boolean	CurveVisibleReso2;
+System.Boolean	CurveVisibleReso3;
+System.Boolean	CurveVisibleReso4;
+System.Boolean	CurveVisibleVelocity;
+System.Boolean	CurveVisibleVibratoDepth;
+System.Boolean	CurveVisibleVibratoRate;
+System.Int32	DefaultDEMaccent;
+System.Int32	DefaultDEMdecGainRate;
+System.Int32	DefaultPMBendDepth;
+System.Int32	DefaultPMBendLength;
+System.Int32	DefaultPMbPortamentoUse;
+System.String	DefaultSingerName;
+cadencii.RendererKind	DefaultSynthesizer;
+cadencii.DefaultVibratoLengthEnum	DefaultVibratoLength;
+System.Int32	DefaultXScale;
+System.Boolean	DoNotAskKeySoundGeneration;
+System.Boolean	DoNotAutomaticallyCheckForUpdates;
+System.Boolean	DoNotUseAquesTone;
+System.Boolean	DoNotUseAquesTone2;
+System.Boolean	DoNotUseVocaloid1;
+System.Boolean	DoNotUseVocaloid2;
+System.Boolean	EnableAutoVibrato;
+cadencii.xml.XmlPoint	FormIconPaletteLocation;
+System.Int32	GameControlerCircle;
+System.Int32	GameControlerCross;
+System.Int32	GameControlerMinimumEventInterval;
+System.Int32	GameControlerRectangle;
+System.Int32	GameControlerTriangle;
+System.Int32	GameControlL1;
+System.Int32	GameControlL2;
+System.Int32	GameControlPovDown;
+System.Int32	GameControlPovLeft;
+System.Int32	GameControlPovRight;
+System.Int32	GameControlPovUp;
+System.Int32	GameControlR1;
+System.Int32	GameControlR2;
+System.Int32	GameControlSelect;
+System.Int32	GameControlStart;
+System.Int32	GameControlStirckL;
+System.Int32	GameControlStirckR;
+System.Boolean	IconPaletteVisible;
+System.Boolean	KeepLyricInputMode;
+System.Int32	KeyWidth;
+System.String	Language;
+System.String	LastUsedExtension;
+cadencii.java.util.Vector`1[System.String]	LastUsedPathIn;
+cadencii.java.util.Vector`1[System.String]	LastUsedPathOut;
+cadencii.QuantizeMode	LengthQuantize;
+System.Boolean	LengthQuantizeTriplet;
+System.Int32	MaximumFrameRate;
+cadencii.FormMidiImExportConfig	MidiImExportConfigExport;
+cadencii.FormMidiImExportConfig	MidiImExportConfigImport;
+cadencii.FormMidiImExportConfig	MidiImExportConfigImportVsq;
+cadencii.MidiPortConfig	MidiInPort;
+cadencii.MidiPortConfig	MidiInPortMtc;
+System.Int32	MinimumScrollHandleWidth;
+System.Boolean	MixerVisible;
+System.Int32	MouseDragIncrement;
+System.Int32	MouseDragMaximumRate;
+System.Int32	MouseHoverTime;
+System.Int32	NumRecentFiles;
+System.Boolean	OverviewEnabled;
+System.Int32	OverviewScaleCount;
+System.String	PathAquesTone;
+System.String	PathAquesTone2;
+System.String	PathResampler;
+cadencii.java.util.Vector`1[System.String]	PathResamplers;
+System.String	PathWavtool;
+System.Int32	PianoRollScaleY;
+System.Boolean	PlayPreviewWhenRightClick;
+cadencii.QuantizeMode	PositionQuantize;
+System.Boolean	PositionQuantizeTriplet;
+System.Int32	PreSendTime;
+cadencii.PropertyPanelState	PropertyWindowStatus;
+System.Int32	PxTolerance;
+System.Int32	PxToleranceBezier;
+System.Int32	PxTrackHeight;
+cadencii.java.util.Vector`1[System.String]	RecentFiles;
+cadencii.java.util.Vector`1[System.Boolean]	ResamplersWithWine;
+System.Boolean	ResamplerWithWine;
+System.String	ScreenFontName;
+System.Boolean	ScrollHorizontalOnWheel;
+System.Boolean	SelfDeRomanization;
+cadencii.java.util.Vector`1[cadencii.ValuePairOfStringArrayOfKeys]	ShortcutKeys;
+System.Boolean	ShowExpLine;
+System.Boolean	ShowLyric;
+System.Boolean	SkipDrawWhilePlaying;
+System.Windows.Forms.Keys[]	SpecialShortcutGoToFirst;
+System.Int32	SplitContainer2LastDividerLocation;
+System.Boolean	UseProjectCache;
+cadencii.java.util.Vector`1[System.String]	UserDictionaries;
+System.Boolean	UseSpaceKeyAsMiddleButtonModifier;
+System.Boolean	UseUserDefinedAutoVibratoType;
+System.Boolean	UseWideCharacterWorkaround;
+cadencii.java.util.Vector`1[cadencii.vsq.SingerConfig]	UtauSingers;
+System.Boolean	ViewAtcualPitch;
+System.Boolean	ViewWaveform;
+System.Boolean	WavtoolWithWine;
+System.Int32	WheelOrder;
+System.Boolean	WindowMaximized;
+cadencii.java.awt.Rectangle	WindowRect;
+System.String	WinePrefix;
+System.String	WineTop;
+System.Boolean	WineTopBuiltin;

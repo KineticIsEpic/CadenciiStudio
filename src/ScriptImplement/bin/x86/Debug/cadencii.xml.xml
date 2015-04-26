@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cadencii.xml</name>
+    </assembly>
+    <members>
+        <member name="T:cadencii.xml.XmlItemDescription">
+            <summary>
+            フィールド、またはプロパティの概要を格納するattribute
+            </summary>
+        </member>
+        <member name="T:cadencii.xml.XmlSerializeWithDescription">
+            <summary>
+            フィールドおよびプロパティを、XmlItemDescription属性の文字列を付加しながらXmlシリアライズする
+            </summary>
+        </member>
+        <member name="T:cadencii.xml.XmlStaticMemberSerializer">
+            <summary>
+            クラスのstaticメンバーのxmlシリアライズ/デシリアライズを行うclass
+            </summary>
+        </member>
+        <member name="F:cadencii.xml.XmlStaticMemberSerializer.m_item">
+            <summary>
+            シリアライズする対象の型．staticメンバーだけなので，インスタンスではなく型を保持
+            </summary>
+        </member>
+        <member name="F:cadencii.xml.XmlStaticMemberSerializer.m_config_type">
+            <summary>
+            シリアライズ/デシリアライズするための内部型
+            </summary>
+        </member>
+        <member name="F:cadencii.xml.XmlStaticMemberSerializer.m_xs">
+            <summary>
+            m_config_typeで初期化されたシリアライザ
+            </summary>
+        </member>
+        <member name="M:cadencii.xml.XmlStaticMemberSerializer.#ctor(System.Type)">
+            <summary>
+            指定された型をシリアライズするための初期化を行います
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:cadencii.xml.XmlStaticMemberSerializer.Serialize(System.IO.Stream)">
+            <summary>
+            シリアライズを行い，ストリームに書き込みます
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:cadencii.xml.XmlStaticMemberSerializer.Deserialize(System.IO.Stream)">
+            <summary>
+            指定したストリームを使って，デシリアライズを行います
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:cadencii.xml.XmlStaticMemberSerializer.GenerateConfigType">
+            <summary>
+            シリアライズ用の内部型をコンパイルし，m_xsが使用できるようにします
+            </summary>
+        </member>
+        <member name="M:cadencii.xml.XmlStaticMemberSerializer.CollectScriptConfigEntries(System.Type)">
+            <summary>
+            設定ファイルから読込むための型情報を蒐集
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.xml.XmlStaticMemberSerializer.GenerateClassCodeForXmlSerialization(System.Collections.Generic.List{cadencii.xml.XmlStaticMemberSerializer.MemberEntry},System.Type)">
+            <summary>
+            指定した型から、Reflectionを使ってxmlシリアライズ用のクラスをコンパイルするためのC#コードを作成します
+            </summary>
+            <param name="implemented"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.xml.XmlStaticMemberSerializer.actualTypeNameFrom(System.String)">
+            <summary>
+            ソースコード上で利用可能な型名を調べます。
+            System.Collections.Generic.List`1[System.String] =&gt; System.Collections.Generic.List&lt;System.String&gt;など。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:cadencii.xml.XmlStaticMemberSerializer.MemberEntry">
+            <summary>
+            ターゲットとなるクラスから，シリアライズするメンバーを抽出する時に使用
+            </summary>
+        </member>
+        <member name="F:cadencii.xml.XmlStaticMemberSerializer.MemberEntry.Name">
+            <summary>
+            プロパティ/フィールドの名前
+            </summary>
+        </member>
+        <member name="F:cadencii.xml.XmlStaticMemberSerializer.MemberEntry.Type">
+            <summary>
+            プロパティ/フィールドの型
+            </summary>
+        </member>
+        <member name="F:cadencii.xml.XmlStaticMemberSerializer.MemberEntry.Default">
+            <summary>
+            プロパティ/フィールドのデフォルト値
+            </summary>
+        </member>
+    </members>
+</doc>

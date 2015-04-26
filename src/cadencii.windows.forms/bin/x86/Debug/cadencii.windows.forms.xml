@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cadencii.windows.forms</name>
+    </assembly>
+    <members>
+        <member name="F:cadencii.windows.forms.InputBox.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:cadencii.windows.forms.InputBox.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:cadencii.windows.forms.InputBox.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="T:cadencii.windows.forms.Rebar">
+            <summary>
+            Summary description for UserControl1.
+            </summary>
+        </member>
+        <member name="F:cadencii.windows.forms.Rebar._imageList">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:cadencii.windows.forms.Rebar._toggleDoubleClick">
+            <summary>
+            ダブルクリックでBANDの最大化・最小化を行う場合true
+            </summary>
+        </member>
+        <member name="F:cadencii.windows.forms.Rebar.CHEVRON_WIDTH">
+            <summary>
+            width of chevron. This value will be updated in NotifyChevronPushed method.
+            </summary>
+        </member>
+        <member name="M:cadencii.windows.forms.Rebar.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:cadencii.windows.forms.Rebar.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:cadencii.windows.forms.GripperSettings">
+            <summary>
+            Summary description for BandWrapper.
+            </summary>
+        </member>
+        <member name="M:cadencii.windows.forms.RebarBand.cloneMenuItemRecursive(System.Windows.Forms.Menu.MenuItemCollection,System.Windows.Forms.Menu.MenuItemCollection)">
+            <summary>
+            メニューアイテムの階層を再帰的にコピーします
+            </summary>
+            <param name="dest"></param>
+            <param name="src"></param>
+        </member>
+        <member name="T:cadencii.windows.forms.RebarBandCollection">
+            <summary>
+            Summary description for BandCollection.
+            </summary>
+        </member>
+        <member name="T:cadencii.windows.forms.BandCollectionEditor">
+            <summary>
+            Summary description for BandCollectionEditor.
+            </summary>
+        </member>
+        <member name="T:cadencii.windows.forms.BandDesigner">
+            <summary>
+            Summary description for BandDesigner.
+            </summary>
+        </member>
+        <member name="T:cadencii.windows.forms.RebarDesigner">
+            <summary>
+            Summary description for RebarDesigner.
+            </summary>
+        </member>
+    </members>
+</doc>

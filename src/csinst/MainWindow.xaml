@@ -1,0 +1,6 @@
+﻿<Window x:Class="csinst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CadenciiStudio Installer" Height="237.057" Width="321.454" ResizeMode="NoResize">
+    <Grid Background="#FF333338"/>
+</Window>

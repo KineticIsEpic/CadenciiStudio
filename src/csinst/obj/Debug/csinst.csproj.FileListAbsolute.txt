@@ -1,0 +1,13 @@
+M:\another folder\cadencii-master\src\csinst\bin\Debug\csinst.exe.config
+M:\another folder\cadencii-master\src\csinst\bin\Debug\csinst.exe
+M:\another folder\cadencii-master\src\csinst\bin\Debug\csinst.pdb
+M:\another folder\cadencii-master\src\csinst\obj\Debug\csinst.csprojResolveAssemblyReference.cache
+M:\another folder\cadencii-master\src\csinst\obj\Debug\MainWindow.baml
+M:\another folder\cadencii-master\src\csinst\obj\Debug\MainWindow.g.cs
+M:\another folder\cadencii-master\src\csinst\obj\Debug\App.g.cs
+M:\another folder\cadencii-master\src\csinst\obj\Debug\csinst_MarkupCompile.cache
+M:\another folder\cadencii-master\src\csinst\obj\Debug\csinst.g.resources
+M:\another folder\cadencii-master\src\csinst\obj\Debug\csinst.Properties.Resources.resources
+M:\another folder\cadencii-master\src\csinst\obj\Debug\csinst.csproj.GenerateResource.Cache
+M:\another folder\cadencii-master\src\csinst\obj\Debug\csinst.exe
+M:\another folder\cadencii-master\src\csinst\obj\Debug\csinst.pdb

@@ -1,0 +1,16 @@
+M:\another folder\cadencii-master\src\Cadencii\bin\x86\Debug\vConnectStandDBConvert.exe
+M:\another folder\cadencii-master\src\Cadencii\bin\x86\Debug\vConnectStandDBConvert.pdb
+M:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.csprojResolveAssemblyReference.cache
+M:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\cadencii.vconnect.MainForm.resources
+M:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\cadencii.vconnect.Properties.Resources.resources
+M:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.csproj.GenerateResource.Cache
+M:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.exe
+M:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.pdb
+G:\another folder\cadencii-master\src\Cadencii\bin\x86\Debug\vConnectStandDBConvert.exe
+G:\another folder\cadencii-master\src\Cadencii\bin\x86\Debug\vConnectStandDBConvert.pdb
+G:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.csprojResolveAssemblyReference.cache
+G:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\cadencii.vconnect.MainForm.resources
+G:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\cadencii.vconnect.Properties.Resources.resources
+G:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.csproj.GenerateResource.Cache
+G:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.exe
+G:\another folder\cadencii-master\src\vConnectStandDBConvert\obj\x86\Debug\vConnectStandDBConvert.pdb

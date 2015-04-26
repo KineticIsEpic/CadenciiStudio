@@ -1,0 +1,9 @@
+M:\another folder\cadencii-master\src\cadencii.apputil\bin\x86\Debug\cadencii.apputil.dll
+M:\another folder\cadencii-master\src\cadencii.apputil\bin\x86\Debug\cadencii.apputil.pdb
+M:\another folder\cadencii-master\src\cadencii.apputil\bin\x86\Debug\cadencii.apputil.xml
+M:\another folder\cadencii-master\src\cadencii.apputil\bin\x86\Debug\cadencii.core.dll
+M:\another folder\cadencii-master\src\cadencii.apputil\bin\x86\Debug\cadencii.core.pdb
+M:\another folder\cadencii-master\src\cadencii.apputil\bin\x86\Debug\cadencii.core.xml
+M:\another folder\cadencii-master\src\cadencii.apputil\obj\x86\Debug\cadencii.apputil.csprojResolveAssemblyReference.cache
+M:\another folder\cadencii-master\src\cadencii.apputil\obj\x86\Debug\cadencii.apputil.dll
+M:\another folder\cadencii-master\src\cadencii.apputil\obj\x86\Debug\cadencii.apputil.pdb

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF5EB52F-11D8-4939-ADCD-90F432A71ECC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenerateKeySound</RootNamespace>
+    <AssemblyName>GenerateKeySound</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\Cadencii\bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CSHARP</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\Cadencii\bin\x86\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>CSHARP</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugMinimal|x86' ">
+    <OutputPath>bin\x86\DebugMinimal\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CSHARP</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseMinimal|x86' ">
+    <OutputPath>bin\x86\ReleaseMinimal\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>CSHARP</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoRelease|x86' ">
+    <OutputPath>bin\x86\MonoRelease\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>CSHARP</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cadencii\Cadencii.csproj">
+      <Project>{A97A6445-5A48-4CEC-A7CE-05B10126CA2A}</Project>
+      <Name>Cadencii</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cadencii.media\cadencii.media.csproj">
+      <Project>{F4F8F601-4E3D-43F5-A8A8-AA1FB7F48452}</Project>
+      <Name>cadencii.media</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cadencii.vsq\cadencii.vsq.csproj">
+      <Project>{673347F3-6FC2-4F82-9273-BF158E0F8CB1}</Project>
+      <Name>cadencii.vsq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cadencii.windows.forms\cadencii.windows.forms.csproj">
+      <Project>{B9481E3B-6842-4AB3-8ED4-29C86C2579A3}</Project>
+      <Name>cadencii.windows.forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cadencii.core\cadencii.core.csproj">
+      <Project>{C8AAE632-9C6C-4372-8175-811528A66742}</Project>
+      <Name>cadencii.core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>@set PATH=$(DevEnvDir);%25PATH%25
+"$(DevEnvDir)..\..\VC\bin\editbin.exe" /NXCOMPAT:NO "$(TargetPath)"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
