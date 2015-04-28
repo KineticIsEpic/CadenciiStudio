@@ -17876,6 +17876,7 @@ namespace cadencii
         // This is where the submenu-hiding business takes place:
         private void bigMenu_Click_1(object sender, EventArgs e) {
             importMenu.Visible = false;
+            exportMenu.Visible = false;
         }
 
         private void controlTrack_mouseMove(object s, EventArgs e) {

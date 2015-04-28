@@ -76,6 +76,8 @@ namespace cadencii
         /// Depthカーブを描画するのに使う描画器
         /// </summary>
         private LineGraphDrawer mDrawerDepth = null;
+        private Timer vibratoEditTimer;
+        private Panel panel1;
         /// <summary>
         /// 結果として得られるピッチベンドカーブを描画するのに使う描画器
         /// </summary>
@@ -503,13 +505,12 @@ namespace cadencii
 
             labelPresets.Text = _( "List of vibrato preset" );
 
-            groupEdit.Text = _( "Edit" );
             labelName.Text = _( "Name" );
 
             groupPreview.Text = _( "Preview" );
-            labelDepthCurve.Text = _( "Depth curve" );
-            labelRateCurve.Text = _( "Rate curve" );
-            labelResulting.Text = _( "Resulting pitch bend" );
+            //labelDepthCurve.Text = _( "Depth curve" );
+            //labelRateCurve.Text = _( "Rate curve" );
+            //labelResulting.Text = _( "Resulting pitch bend" );
 
             buttonAdd.Text = _( "Add" );
             buttonRemove.Text = _( "Remove" );
@@ -682,171 +683,202 @@ namespace cadencii
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCancel = new Button();
-            this.buttonOk = new Button();
-            this.buttonRemove = new Button();
-            this.buttonAdd = new Button();
-            this.buttonUp = new Button();
-            this.buttonDown = new Button();
-            this.labelRate = new Label();
-            this.labelDepth = new Label();
-            this.labelPresets = new Label();
-            this.pictureRate = new PictureBox();
-            this.labelRateCurve = new Label();
-            this.labelDepthCurve = new Label();
-            this.pictureDepth = new PictureBox();
+            this.components = new System.ComponentModel.Container();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonUp = new System.Windows.Forms.Button();
+            this.buttonDown = new System.Windows.Forms.Button();
+            this.labelRate = new System.Windows.Forms.Label();
+            this.labelDepth = new System.Windows.Forms.Label();
+            this.labelPresets = new System.Windows.Forms.Label();
+            this.pictureRate = new System.Windows.Forms.PictureBox();
+            this.labelRateCurve = new System.Windows.Forms.Label();
+            this.labelDepthCurve = new System.Windows.Forms.Label();
+            this.pictureDepth = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.labelResulting = new Label();
-            this.pictureResulting = new PictureBox();
-            this.groupEdit = new System.Windows.Forms.GroupBox();
-            this.textName = new TextBox();
-            this.labelName = new Label();
+            this.labelResulting = new System.Windows.Forms.Label();
+            this.pictureResulting = new System.Windows.Forms.PictureBox();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.groupPreview = new System.Windows.Forms.GroupBox();
-            this.listPresets = new ListBox();
-            this.textDepth = new cadencii.NumberTextBox();
+            this.listPresets = new System.Windows.Forms.ListBox();
+            this.vibratoEditTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textRate = new cadencii.NumberTextBox();
+            this.textDepth = new cadencii.NumberTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDepth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureResulting)).BeginInit();
-            this.groupEdit.SuspendLayout();
             this.groupPreview.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(76)))));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point( 424, 345 );
+            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(71)))));
+            this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(86)))));
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCancel.Location = new System.Drawing.Point(424, 249);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size( 75, 23 );
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             // 
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(76)))));
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.Location = new System.Drawing.Point( 343, 345 );
+            this.buttonOk.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(71)))));
+            this.buttonOk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(86)))));
+            this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOk.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonOk.Location = new System.Drawing.Point(343, 249);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size( 75, 23 );
+            this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 10;
             this.buttonOk.Text = "OK";
-            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.UseVisualStyleBackColor = false;
             // 
             // buttonRemove
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonRemove.Location = new System.Drawing.Point( 12, 301 );
+            this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(76)))));
+            this.buttonRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(71)))));
+            this.buttonRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(86)))));
+            this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemove.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonRemove.Location = new System.Drawing.Point(42, 209);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size( 75, 23 );
+            this.buttonRemove.Size = new System.Drawing.Size(25, 23);
             this.buttonRemove.TabIndex = 3;
-            this.buttonRemove.Text = "Remove";
-            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Text = "-";
+            this.buttonRemove.UseVisualStyleBackColor = false;
             // 
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAdd.Location = new System.Drawing.Point( 12, 272 );
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(76)))));
+            this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(71)))));
+            this.buttonAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(86)))));
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonAdd.Location = new System.Drawing.Point(11, 209);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size( 75, 23 );
+            this.buttonAdd.Size = new System.Drawing.Size(25, 23);
             this.buttonAdd.TabIndex = 2;
-            this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Text = "+";
+            this.buttonAdd.UseVisualStyleBackColor = false;
             // 
             // buttonUp
             // 
             this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonUp.Location = new System.Drawing.Point( 102, 272 );
+            this.buttonUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(76)))));
+            this.buttonUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(71)))));
+            this.buttonUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(86)))));
+            this.buttonUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUp.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonUp.Location = new System.Drawing.Point(114, 209);
             this.buttonUp.Name = "buttonUp";
-            this.buttonUp.Size = new System.Drawing.Size( 75, 23 );
+            this.buttonUp.Size = new System.Drawing.Size(29, 23);
             this.buttonUp.TabIndex = 4;
-            this.buttonUp.Text = "Up";
-            this.buttonUp.UseVisualStyleBackColor = true;
+            this.buttonUp.Text = "U";
+            this.buttonUp.UseVisualStyleBackColor = false;
             // 
             // buttonDown
             // 
             this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDown.Location = new System.Drawing.Point( 102, 301 );
+            this.buttonDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(76)))));
+            this.buttonDown.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(71)))));
+            this.buttonDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(86)))));
+            this.buttonDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDown.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonDown.Location = new System.Drawing.Point(149, 209);
             this.buttonDown.Name = "buttonDown";
-            this.buttonDown.Size = new System.Drawing.Size( 75, 23 );
+            this.buttonDown.Size = new System.Drawing.Size(29, 23);
             this.buttonDown.TabIndex = 5;
-            this.buttonDown.Text = "Down";
-            this.buttonDown.UseVisualStyleBackColor = true;
+            this.buttonDown.Text = "D";
+            this.buttonDown.UseVisualStyleBackColor = false;
             // 
             // labelRate
             // 
             this.labelRate.AutoSize = true;
-            this.labelRate.Location = new System.Drawing.Point( 10, 15 );
+            this.labelRate.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelRate.Location = new System.Drawing.Point(11, 11);
             this.labelRate.Name = "labelRate";
-            this.labelRate.Size = new System.Drawing.Size( 54, 12 );
+            this.labelRate.Size = new System.Drawing.Size(36, 13);
             this.labelRate.TabIndex = 129;
-            this.labelRate.Text = "Start rate";
+            this.labelRate.Text = "RATE";
             // 
             // labelDepth
             // 
             this.labelDepth.AutoSize = true;
-            this.labelDepth.Location = new System.Drawing.Point( 10, 40 );
+            this.labelDepth.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelDepth.Location = new System.Drawing.Point(132, 11);
             this.labelDepth.Name = "labelDepth";
-            this.labelDepth.Size = new System.Drawing.Size( 62, 12 );
+            this.labelDepth.Size = new System.Drawing.Size(44, 13);
             this.labelDepth.TabIndex = 130;
-            this.labelDepth.Text = "Start depth";
+            this.labelDepth.Text = "DEPTH";
             // 
             // labelPresets
             // 
             this.labelPresets.AutoSize = true;
-            this.labelPresets.Location = new System.Drawing.Point( 12, 15 );
+            this.labelPresets.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelPresets.Location = new System.Drawing.Point(12, 15);
             this.labelPresets.Name = "labelPresets";
-            this.labelPresets.Size = new System.Drawing.Size( 113, 12 );
+            this.labelPresets.Size = new System.Drawing.Size(81, 13);
             this.labelPresets.TabIndex = 134;
-            this.labelPresets.Text = "List of preset vibrato";
+            this.labelPresets.Text = "Vibrato Presets:";
             // 
             // pictureRate
             // 
-            this.pictureRate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureRate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureRate.Location = new System.Drawing.Point( 12, 20 );
+            this.pictureRate.Location = new System.Drawing.Point(476, 5);
             this.pictureRate.Name = "pictureRate";
-            this.pictureRate.Size = new System.Drawing.Size( 133, 74 );
+            this.pictureRate.Size = new System.Drawing.Size(27, 55);
             this.pictureRate.TabIndex = 135;
             this.pictureRate.TabStop = false;
             // 
             // labelRateCurve
             // 
             this.labelRateCurve.AutoSize = true;
-            this.labelRateCurve.Location = new System.Drawing.Point( 10, 5 );
+            this.labelRateCurve.Location = new System.Drawing.Point(10, 5);
             this.labelRateCurve.Name = "labelRateCurve";
-            this.labelRateCurve.Size = new System.Drawing.Size( 61, 12 );
+            this.labelRateCurve.Size = new System.Drawing.Size(60, 13);
             this.labelRateCurve.TabIndex = 136;
             this.labelRateCurve.Text = "Rate curve";
             // 
             // labelDepthCurve
             // 
             this.labelDepthCurve.AutoSize = true;
-            this.labelDepthCurve.Location = new System.Drawing.Point( 10, 5 );
+            this.labelDepthCurve.Location = new System.Drawing.Point(10, 5);
             this.labelDepthCurve.Name = "labelDepthCurve";
-            this.labelDepthCurve.Size = new System.Drawing.Size( 67, 12 );
+            this.labelDepthCurve.Size = new System.Drawing.Size(66, 13);
             this.labelDepthCurve.TabIndex = 137;
             this.labelDepthCurve.Text = "Depth curve";
             // 
             // pictureDepth
             // 
-            this.pictureDepth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureDepth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureDepth.Location = new System.Drawing.Point( 12, 20 );
+            this.pictureDepth.Location = new System.Drawing.Point(442, 5);
             this.pictureDepth.Name = "pictureDepth";
-            this.pictureDepth.Size = new System.Drawing.Size( 146, 73 );
+            this.pictureDepth.Size = new System.Drawing.Size(27, 55);
             this.pictureDepth.TabIndex = 138;
             this.pictureDepth.TabStop = false;
             // 
@@ -854,20 +886,18 @@ namespace cadencii
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point( 0, 0 );
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add( this.pictureRate );
-            this.splitContainer1.Panel1.Controls.Add( this.labelRateCurve );
+            this.splitContainer1.Panel1.Controls.Add(this.labelRateCurve);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add( this.pictureDepth );
-            this.splitContainer1.Panel2.Controls.Add( this.labelDepthCurve );
-            this.splitContainer1.Size = new System.Drawing.Size( 310, 97 );
-            this.splitContainer1.SplitterDistance = 148;
+            this.splitContainer1.Panel2.Controls.Add(this.labelDepthCurve);
+            this.splitContainer1.Size = new System.Drawing.Size(4, 25);
+            this.splitContainer1.SplitterDistance = 25;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 139;
             // 
@@ -875,138 +905,146 @@ namespace cadencii
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.IsSplitterFixed = true;
-            this.splitContainer2.Location = new System.Drawing.Point( 3, 15 );
+            this.splitContainer2.Location = new System.Drawing.Point(3, 16);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add( this.splitContainer1 );
+            this.splitContainer2.Panel1.Controls.Add(this.splitContainer1);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add( this.pictureResulting );
-            this.splitContainer2.Panel2.Controls.Add( this.labelResulting );
-            this.splitContainer2.Size = new System.Drawing.Size( 310, 195 );
-            this.splitContainer2.SplitterDistance = 97;
+            this.splitContainer2.Panel2.Controls.Add(this.labelResulting);
+            this.splitContainer2.Size = new System.Drawing.Size(4, 17);
+            this.splitContainer2.SplitterDistance = 25;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 140;
             // 
             // labelResulting
             // 
             this.labelResulting.AutoSize = true;
-            this.labelResulting.Location = new System.Drawing.Point( 10, 5 );
+            this.labelResulting.Location = new System.Drawing.Point(10, 5);
             this.labelResulting.Name = "labelResulting";
-            this.labelResulting.Size = new System.Drawing.Size( 110, 12 );
+            this.labelResulting.Size = new System.Drawing.Size(104, 13);
             this.labelResulting.TabIndex = 137;
             this.labelResulting.Text = "Resulting pitch bend";
             // 
             // pictureResulting
             // 
-            this.pictureResulting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureResulting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureResulting.Location = new System.Drawing.Point( 12, 20 );
+            this.pictureResulting.Location = new System.Drawing.Point(187, 72);
             this.pictureResulting.Name = "pictureResulting";
-            this.pictureResulting.Size = new System.Drawing.Size( 295, 71 );
+            this.pictureResulting.Size = new System.Drawing.Size(316, 160);
             this.pictureResulting.TabIndex = 136;
             this.pictureResulting.TabStop = false;
-            // 
-            // groupEdit
-            // 
-            this.groupEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupEdit.Controls.Add( this.textName );
-            this.groupEdit.Controls.Add( this.labelName );
-            this.groupEdit.Controls.Add( this.labelDepth );
-            this.groupEdit.Controls.Add( this.textDepth );
-            this.groupEdit.Controls.Add( this.textRate );
-            this.groupEdit.Controls.Add( this.labelRate );
-            this.groupEdit.Location = new System.Drawing.Point( 183, 15 );
-            this.groupEdit.Name = "groupEdit";
-            this.groupEdit.Size = new System.Drawing.Size( 316, 90 );
-            this.groupEdit.TabIndex = 6;
-            this.groupEdit.TabStop = false;
-            this.groupEdit.Text = "Edit";
+            this.pictureResulting.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureResulting_MouseDown);
+            this.pictureResulting.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureResulting_MouseUp);
             // 
             // textName
             // 
-            this.textName.Location = new System.Drawing.Point( 86, 62 );
+            this.textName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(76)))));
+            this.textName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textName.Location = new System.Drawing.Point(56, 35);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size( 169, 19 );
+            this.textName.Size = new System.Drawing.Size(183, 20);
             this.textName.TabIndex = 9;
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point( 10, 65 );
+            this.labelName.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelName.Location = new System.Drawing.Point(10, 38);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size( 34, 12 );
+            this.labelName.Size = new System.Drawing.Size(38, 13);
             this.labelName.TabIndex = 133;
-            this.labelName.Text = "Name";
+            this.labelName.Text = "NAME";
             // 
             // groupPreview
             // 
-            this.groupPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupPreview.Controls.Add( this.splitContainer2 );
-            this.groupPreview.Location = new System.Drawing.Point( 183, 111 );
+            this.groupPreview.Controls.Add(this.splitContainer2);
+            this.groupPreview.Location = new System.Drawing.Point(167, 6);
             this.groupPreview.Name = "groupPreview";
-            this.groupPreview.Size = new System.Drawing.Size( 316, 213 );
+            this.groupPreview.Size = new System.Drawing.Size(10, 36);
             this.groupPreview.TabIndex = 142;
             this.groupPreview.TabStop = false;
             this.groupPreview.Text = "Preview";
+            this.groupPreview.Visible = false;
             // 
             // listPresets
             // 
-            this.listPresets.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.listPresets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.listPresets.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listPresets.ForeColor = System.Drawing.Color.Gainsboro;
             this.listPresets.FormattingEnabled = true;
-            this.listPresets.ItemHeight = 12;
-            this.listPresets.Location = new System.Drawing.Point( 12, 30 );
+            this.listPresets.Location = new System.Drawing.Point(15, 37);
             this.listPresets.Name = "listPresets";
-            this.listPresets.Size = new System.Drawing.Size( 165, 232 );
+            this.listPresets.Size = new System.Drawing.Size(165, 156);
             this.listPresets.TabIndex = 1;
             // 
-            // textDepth
+            // vibratoEditTimer
             // 
-            this.textDepth.BackColor = System.Drawing.Color.FromArgb( ((int)(((byte)(240)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))) );
-            this.textDepth.ForeColor = System.Drawing.Color.White;
-            this.textDepth.Location = new System.Drawing.Point( 86, 37 );
-            this.textDepth.Name = "textDepth";
-            this.textDepth.Size = new System.Drawing.Size( 72, 19 );
-            this.textDepth.TabIndex = 8;
-            this.textDepth.Type = cadencii.NumberTextBox.ValueType.Integer;
+            this.vibratoEditTimer.Interval = 1;
+            this.vibratoEditTimer.Tick += new System.EventHandler(this.vibratoEditTimer_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
+            this.panel1.Controls.Add(this.textRate);
+            this.panel1.Controls.Add(this.textName);
+            this.panel1.Controls.Add(this.labelName);
+            this.panel1.Controls.Add(this.textDepth);
+            this.panel1.Controls.Add(this.labelRate);
+            this.panel1.Controls.Add(this.labelDepth);
+            this.panel1.Location = new System.Drawing.Point(187, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(249, 63);
+            this.panel1.TabIndex = 143;
             // 
             // textRate
             // 
-            this.textRate.BackColor = System.Drawing.Color.FromArgb( ((int)(((byte)(240)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))) );
-            this.textRate.ForeColor = System.Drawing.Color.White;
-            this.textRate.Location = new System.Drawing.Point( 86, 12 );
+            this.textRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.textRate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textRate.ForeColor = System.Drawing.Color.Gainsboro;
+            this.textRate.Location = new System.Drawing.Point(183, 7);
             this.textRate.Name = "textRate";
-            this.textRate.Size = new System.Drawing.Size( 72, 19 );
+            this.textRate.Size = new System.Drawing.Size(56, 20);
             this.textRate.TabIndex = 7;
             this.textRate.Type = cadencii.NumberTextBox.ValueType.Integer;
+            // 
+            // textDepth
+            // 
+            this.textDepth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.textDepth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textDepth.ForeColor = System.Drawing.Color.Gainsboro;
+            this.textDepth.Location = new System.Drawing.Point(56, 8);
+            this.textDepth.Name = "textDepth";
+            this.textDepth.Size = new System.Drawing.Size(56, 20);
+            this.textDepth.TabIndex = 8;
+            this.textDepth.Type = cadencii.NumberTextBox.ValueType.Integer;
             // 
             // FormVibratoPreset
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF( 96F, 96F );
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size( 511, 380 );
-            this.Controls.Add( this.listPresets );
-            this.Controls.Add( this.groupPreview );
-            this.Controls.Add( this.groupEdit );
-            this.Controls.Add( this.labelPresets );
-            this.Controls.Add( this.buttonRemove );
-            this.Controls.Add( this.buttonAdd );
-            this.Controls.Add( this.buttonUp );
-            this.Controls.Add( this.buttonDown );
-            this.Controls.Add( this.buttonOk );
-            this.Controls.Add( this.buttonCancel );
+            this.ClientSize = new System.Drawing.Size(511, 284);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureDepth);
+            this.Controls.Add(this.pictureRate);
+            this.Controls.Add(this.pictureResulting);
+            this.Controls.Add(this.listPresets);
+            this.Controls.Add(this.groupPreview);
+            this.Controls.Add(this.labelPresets);
+            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.buttonUp);
+            this.Controls.Add(this.buttonDown);
+            this.Controls.Add(this.buttonOk);
+            this.Controls.Add(this.buttonCancel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormVibratoPreset";
@@ -1014,22 +1052,25 @@ namespace cadencii
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Vibrato preset";
+            this.Load += new System.EventHandler(this.FormVibratoPreset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDepth)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout( false );
+            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout( false );
+            this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
-            this.splitContainer1.ResumeLayout( false );
-            this.splitContainer2.Panel1.ResumeLayout( false );
-            this.splitContainer2.Panel2.ResumeLayout( false );
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
-            this.splitContainer2.ResumeLayout( false );
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureResulting)).EndInit();
-            this.groupEdit.ResumeLayout( false );
-            this.groupEdit.PerformLayout();
-            this.groupPreview.ResumeLayout( false );
-            this.ResumeLayout( false );
+            this.groupPreview.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
             this.PerformLayout();
 
         }
@@ -1053,13 +1094,40 @@ namespace cadencii
         private System.Windows.Forms.SplitContainer splitContainer2;
         private Label labelResulting;
         private PictureBox pictureResulting;
-        private GroupBox groupEdit;
         private Label labelName;
         private TextBox textName;
         private GroupBox groupPreview;
         private ListBox listPresets;
         private System.Windows.Forms.Button buttonDown;
         #endregion
+
+        int mousePosX = 0;
+        int mousePosY = 0;
+        int rateValue = 64;
+        int depthValue = 64;
+
+        private void pictureResulting_MouseDown(object sender, MouseEventArgs e) {
+            mousePosX = MousePosition.X;
+            mousePosY = MousePosition.Y;
+
+            rateValue = int.Parse(textRate.Text);
+            depthValue = int.Parse(textDepth.Text);
+
+            vibratoEditTimer.Enabled = true;
+        }
+
+        private void vibratoEditTimer_Tick(object sender, EventArgs e) {
+            textRate.Text = (mousePosX - MousePosition.X + rateValue).ToString();
+            textDepth.Text = (mousePosY - MousePosition.Y + depthValue).ToString();
+        }
+
+        private void pictureResulting_MouseUp(object sender, MouseEventArgs e) {
+            vibratoEditTimer.Enabled = false;
+        }
+
+        private void FormVibratoPreset_Load(object sender, EventArgs e) {
+            this.Size = new System.Drawing.Size(527, 312);
+        }
 #endif
     }
 
